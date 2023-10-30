@@ -17,17 +17,28 @@
 </head>
 <body>
     <header>
-        <i>Icono</i>
-        <figure>
-            <img src="" alt="Foto de perfil">
-            <figcaption>Miguel Ángel Quinteros</figcaption>
-        </figure>
-        <H1>Curriculum</H1>
+        <div id="header_title">
+            <figure id="figure_icon">
+                <img id="img_icon" src="favicon.ico" alt="Icono de la página">
+            </figure>
+            <figure id="figure_profile">
+                <img id="img_profile" src="/assets/img/profile.jpg" alt="Foto de perfil">
+                <figcaption>Miguel Ángel Quinteros</figcaption>
+            </figure>
+            <H1>Curriculum</H1>
+        </div>
+        <div id="header_links">
+            <ul id="ul_links">
+                <li><i class="fa-brands fa-linkedin"></i> Linkedin</li>
+                <li><i class="fa-brands fa-square-github"></i> GitHub</li>
+            </ul>
+        </div>
+
 
     </header>
 
     <nav>
-        <ul>
+        <ul id="ul_navmenu">
             <li>profile</li>
             <li>hard skills</li>
             <li>soft skills</li>            
@@ -75,4 +86,5 @@
     </footer>
 
 </body>
+<script src="https://kit.fontawesome.com/3872e825f0.js" crossorigin="anonymous"></script>
 </html>
