@@ -1,6 +1,8 @@
-import { ReactComponent as Facebook } from '../../assets/icons/facebook.svg'
-/* import { ReactComponent as Instagram } from '../../assets/icons/instagram.svg';
-import { ReactComponent as Twitter_x } from '../../assets/icons/twitter-x.svg'; */
+
+import Facebook from '../../assets/icons/facebook.svg?react';
+import Instagram from '../../assets/icons/instagram.svg?react';
+import Twitter_x from '../../assets/icons/twitter-x.svg?react';
+
 
 export const Icon = ({type}) => {
 

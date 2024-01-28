@@ -1,0 +1,30 @@
+{
+    "header": {
+        "socialContact": [
+            {
+                "iconType": "facebook",
+                "href": "https://www.facebook.com/maq.miguel.quinteros",
+                "text": "facebook"
+            },
+            {
+                "iconType": "instagram",
+                "href": "https://www.instagram.com/maq.miguel.quinteros/",
+                "text": "instagram"
+            },
+            {
+                "iconType": "twitter-x",
+                "href": "https://twitter.com/maq_miguel",
+                "text": "twitter-x"
+            }
+        ],
+        "profileImage": {
+            "src": "https://media.licdn.com/dms/image/C4E03AQFeWGLOObr_Vg/profile-displayphoto-shrink_200_200/0/1650461528496?e=1711584000&v=beta&t=TIwnN66AKyr8ATkuLY7qjR_0tKfwSEofafD7-ts3KVc",
+            "alt": "profile image of Miguel Ángel Quinteros",
+            "variant": "logo"
+        },
+        "pageTitle": {
+            "level": "h1",
+            "text": "Miguel Ángel Quinteros"
+        }
+    }
+}
