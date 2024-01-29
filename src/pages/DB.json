@@ -26,5 +26,32 @@
             "level": "h1",
             "text": "Miguel Ángel Quinteros"
         }
-    }
+    },
+    "navbar": [
+        {
+            "href": "#",
+            "text": "test-navbar01",
+            "variant": "navbar"
+        },
+        {
+            "href": "#",
+            "text": "test-navbar02",
+            "variant": "navbar"
+        },
+        {
+            "href": "#",
+            "text": "test-navbar03",
+            "variant": "navbar"
+        },
+        {
+            "href": "#",
+            "text": "test-navbar04",
+            "variant": "navbar"
+        },
+        {
+            "href": "#",
+            "text": "test-navbar05",
+            "variant": "navbar"
+        }
+    ]
 }
