@@ -30,7 +30,7 @@
     "navbar": [
         {
             "href": "#",
-            "text": "test-navbar01",
+            "text": "test-navbar07",
             "variant": "navbar"
         },
         {
@@ -40,7 +40,7 @@
         },
         {
             "href": "#",
-            "text": "test-navbar03",
+            "text": "test-navbar09",
             "variant": "navbar"
         },
         {

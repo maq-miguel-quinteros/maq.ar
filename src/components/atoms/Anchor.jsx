@@ -27,7 +27,6 @@ const AStyled = styled.a `
 `;
 
 export const Anchor = ({variant ,href, text}) => {
-    console.log(variant)
 
     return (
         <>
