@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 import { Anchor } from "../atoms/Anchor";
 import { Icon } from "../atoms/Icon";
@@ -8,16 +8,23 @@ const DivStyled = styled.div`
     align-items: center;
 `;
 
-export const SocialContact = ({cd}) => {
+export const SocialContact = ({ cd }) => {
 
     return (
         <DivStyled>
-            <DivStyled>
-                <Icon type={'facebook'} />
-                <Anchor 
-                    href={'https://www.facebook.com/maq.miguel.quinteros'}
-                    text={'facebook'} variant={'social'} />
-            </DivStyled>
+            {cd.map((data) => {
+                return (
+                    <DivStyled key={data.href}>
+                        <Icon
+                            type={data.iconType} />
+                        <Anchor
+                            href={data.href}
+                            text={data.text}
+                            variant={data.text}
+                        />
+                    </DivStyled>
+                );
+            })}
         </DivStyled>
     );
-}
+};

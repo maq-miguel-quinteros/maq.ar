@@ -5,7 +5,7 @@ import DB from './DB.json';
 
 export const Home = () => {
 
-    const [dataBase, setDataBase] = useState([]);
+    const [dataBase, setDataBase] = useState(false);    
 
     const getDataBase = () => {
         return new Promise ((resolve, reject) => {
@@ -16,13 +16,13 @@ export const Home = () => {
     useEffect( () => {
         getDataBase()
             .then((response) => {
-                setDataBase(response);
+                setDataBase(response);                
             })            
     }, []);
 
     return (
         <>
-            <Default cd={dataBase} />
+            {dataBase && <Default cd={dataBase} /> }
             
         </>
     );

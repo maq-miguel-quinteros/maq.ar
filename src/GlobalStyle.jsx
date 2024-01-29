@@ -1,9 +1,10 @@
 import {createGlobalStyle} from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle `
-    h1 {
-        color: red;
-        font-size: 2rem;
-        padding: 15px;
+    body {
+        padding: 20px;
+    }
+    a {
+        text-decoration: none;
     }
 `;

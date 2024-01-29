@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Image } from "../atoms/Image";
 import { Title } from "../atoms/Title";
 import { SocialContact } from "../molecules/SocialContact";
-import { useState } from 'react';
 
 const HeaderStyled = styled.header `
     display: flex;
@@ -15,12 +14,11 @@ const DivStyled = styled.div `
     align-items: center;
 `;
 
-export const Header = ({cd = {}}) => {
-    const [data, setData] = useState(cd)
+export const Header = ({cd = {}}) => {   
     return (
         <HeaderStyled>
             <DivStyled>
-                {data &&
+                
                 <Image 
                 variant={cd.profileImage.variant} 
                 src={cd.profileImage.src} 
@@ -28,10 +26,10 @@ export const Header = ({cd = {}}) => {
                 <Title                 
                 level={cd.pageTitle.level} 
                 text={cd.pageTitle.text} />
-                }
+                
                 
             </DivStyled>
-            <SocialContact  />
+            <SocialContact cd={cd.socialContact} />
         </HeaderStyled>
     );
 }
