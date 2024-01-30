@@ -5,7 +5,7 @@ import { Title } from "../atoms/Title"
 export const Card = ({cd}) => {
 
     return (
-        <section>
+        
             <div>
                 <Icon 
                     type={cd.icon.type} />
@@ -17,6 +17,6 @@ export const Card = ({cd}) => {
                     variant={cd.text.variant} 
                     text={cd.text.text} />
             </div>
-        </section>
+        
     )
 }
