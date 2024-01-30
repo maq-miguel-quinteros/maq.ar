@@ -12,7 +12,7 @@ export const Card = ({cd}) => {
                 <Title 
                     variant={cd.title.variant}
                     level={cd.title.level} 
-                    text={cd.title.text} />
+                    text={cd.title.text} />                    
                 <Text 
                     variant={cd.text.variant} 
                     text={cd.text.text} />

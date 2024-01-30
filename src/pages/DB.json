@@ -53,5 +53,172 @@
             "text": "test-navbar05",
             "variant": "navbar"
         }
+    ],
+    "footer": {
+        "text": "maq.ar © Miguel Ángel Quinteros"
+    },
+    "cardPresentation": [
+        {
+            "title": {
+                "variant": "",
+                "level": "h2",
+                "text": "test-navbar07"
+            },
+            "cardList": [
+                {
+                    "title": {
+                        "variant": "",
+                        "level": "h3",
+                        "text": "cardList01"
+                    },
+                    "cards": [
+                        {
+                            "icon": {
+                                "type": "facebook"
+                            },
+                            "title": {
+                                "variant": "",
+                                "level": "h4",
+                                "text": "card01"
+                            },
+                            "text": {
+                                "variant": "",
+                                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat sed consequatur exercitationem nobis qui autem quo, maxime nisi nam ducimus architecto dolorem ut animi delectus laboriosam inventore ex ipsam possimus?"
+                            }
+                        },
+                        {
+                            "icon": {
+                                "type": "facebook"
+                            },
+                            "title": {
+                                "variant": "",
+                                "level": "h4",
+                                "text": "card01"
+                            },
+                            "text": {
+                                "variant": "",
+                                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat sed consequatur exercitationem nobis qui autem quo, maxime nisi nam ducimus architecto dolorem ut animi delectus laboriosam inventore ex ipsam possimus?"
+                            }
+                        },
+                        {
+                            "icon": {
+                                "type": "facebook"
+                            },
+                            "title": {
+                                "variant": "",
+                                "level": "h4",
+                                "text": "card01"
+                            },
+                            "text": {
+                                "variant": "",
+                                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat sed consequatur exercitationem nobis qui autem quo, maxime nisi nam ducimus architecto dolorem ut animi delectus laboriosam inventore ex ipsam possimus?"
+                            }
+                        },
+                        {
+                            "icon": {
+                                "type": "facebook"
+                            },
+                            "title": {
+                                "variant": "",
+                                "level": "h4",
+                                "text": "card01"
+                            },
+                            "text": {
+                                "variant": "",
+                                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat sed consequatur exercitationem nobis qui autem quo, maxime nisi nam ducimus architecto dolorem ut animi delectus laboriosam inventore ex ipsam possimus?"
+                            }
+                        },
+                        {
+                            "icon": {
+                                "type": "facebook"
+                            },
+                            "title": {
+                                "variant": "",
+                                "level": "h4",
+                                "text": "card01"
+                            },
+                            "text": {
+                                "variant": "",
+                                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat sed consequatur exercitationem nobis qui autem quo, maxime nisi nam ducimus architecto dolorem ut animi delectus laboriosam inventore ex ipsam possimus?"
+                            }
+                        },
+                        {
+                            "icon": {
+                                "type": "facebook"
+                            },
+                            "title": {
+                                "variant": "",
+                                "level": "h4",
+                                "text": "card01"
+                            },
+                            "text": {
+                                "variant": "",
+                                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat sed consequatur exercitationem nobis qui autem quo, maxime nisi nam ducimus architecto dolorem ut animi delectus laboriosam inventore ex ipsam possimus?"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": {
+                "variant": "",
+                "level": "h2",
+                "text": "test-navbar02"
+            },
+            "cardList": [
+                {
+                    "title": {
+                        "variant": "",
+                        "level": "h3",
+                        "text": "cardList02"
+                    },
+                    "cards": [
+                        {
+                            "icon": {
+                                "type": "facebook"
+                            },
+                            "title": {
+                                "variant": "",
+                                "level": "h4",
+                                "text": "card01"
+                            },
+                            "text": {
+                                "variant": "",
+                                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat sed consequatur exercitationem nobis qui autem quo, maxime nisi nam ducimus architecto dolorem ut animi delectus laboriosam inventore ex ipsam possimus?"
+                            }
+                        },
+                        {
+                            "icon": {
+                                "type": "facebook"
+                            },
+                            "title": {
+                                "variant": "",
+                                "level": "h4",
+                                "text": "card01"
+                            },
+                            "text": {
+                                "variant": "",
+                                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat sed consequatur exercitationem nobis qui autem quo, maxime nisi nam ducimus architecto dolorem ut animi delectus laboriosam inventore ex ipsam possimus?"
+                            }
+                        },
+                        {
+                            "icon": {
+                                "type": "facebook"
+                            },
+                            "title": {
+                                "variant": "",
+                                "level": "h4",
+                                "text": "card01"
+                            },
+                            "text": {
+                                "variant": "",
+                                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat sed consequatur exercitationem nobis qui autem quo, maxime nisi nam ducimus architecto dolorem ut animi delectus laboriosam inventore ex ipsam possimus?"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
     ]
 }

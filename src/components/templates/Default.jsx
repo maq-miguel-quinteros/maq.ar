@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { NavBar } from "../molecules/NavBar";
 import { Header } from "../organism/Header";
 import { Footer } from '../molecules/Footer';
+import { Children } from 'react';
 
 const DefaultStyled = styled.div`
     height: 100vh;
@@ -17,13 +18,13 @@ const DivStyled = styled.div `
     align-items: center;
 `;
 
-export const Default = ({cd}) => {
+export const Default = ({cd, children}) => {
     
     return (
         <DefaultStyled>
             <Header cd={cd.header} />
             <DivStyled>
-                <section>Content</section>
+                {children}
                 <NavBar cd={cd.navbar} />
             </DivStyled>
             <Footer />

@@ -17,7 +17,7 @@ export const Home = () => {
 
     useEffect( () => {
         getDataBase()
-            .then((response) => {
+            .then((response) => {                
                 setDataBase(response);                
             })            
     }, []);
@@ -27,7 +27,7 @@ export const Home = () => {
             {dataBase && 
             <Default cd={dataBase}> 
                 <CardsPresentation 
-                    cd={dataBase.cardsPresentation} />
+                    cd={dataBase.cardPresentation} />
             </Default>
             }
             
