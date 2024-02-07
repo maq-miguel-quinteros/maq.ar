@@ -5,8 +5,10 @@ import { ResetStyle } from './ResetStyle.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   
-  <React.StrictMode>
+  // <React.StrictMode>
+  <>
     <ResetStyle />
     <App />
-  </React.StrictMode>,
+  </>
+  // </React.StrictMode>,
 )

@@ -2,14 +2,61 @@ import { useState, useEffect } from "react";
 
 import { Default } from "../components/templates/Default";
 import { CardsPresentation } from "../components/templates/CardsPresentation";
-import DB from './DB.json';
+
+import { collection, getDocs, } from 'firebase/firestore';
+import { dataBase } from "../database/firebase";
 
 
 export const Home = () => {
 
-    const [dataBase, setDataBase] = useState(false);    
+    const [prueba, setPrueba] = useState([]);
+    const [aux, setAux] = useState();
 
-    const getDataBase = () => {
+    const getComponents = (database, collectionPath) => {
+
+        const collectionRef = collection(database, collectionPath);
+
+        getDocs(collectionRef)
+            .then((docsRef) => {                
+                docsRef.docs.map((docRef) => {                    
+                    let otro = docRef.data();
+                    setAux()
+                    console.log(aux)
+
+                    if (docRef.data().collections){                        
+                        docRef.data().collections.forEach(collect => {
+                            getComponents(database, 
+                                collectionPath + '/' + docRef.id + '/' + collect);
+                                
+                        });
+                    }                    
+                })
+                //console.log(prueba)
+                
+            })
+            
+    }
+
+    useEffect(() => {       
+        console.log(getComponents(dataBase, 'cardPresentation'))
+
+    }, []);
+
+    return (
+        <>
+            {/* dataBase && 
+            <Default cd={dataBase}> 
+                <CardsPresentation 
+                    cd={dataBase.cardPresentation} />
+            </Default> */
+            }
+
+        </>
+    );
+
+    // import DB from './DB.json';
+
+    /*     const getDataBase = () => {
         return new Promise ((resolve, reject) => {
             resolve(DB);
         })
@@ -20,17 +67,5 @@ export const Home = () => {
             .then((response) => {                
                 setDataBase(response);                
             })            
-    }, []);
-
-    return (
-        <>
-            {dataBase && 
-            <Default cd={dataBase}> 
-                <CardsPresentation 
-                    cd={dataBase.cardPresentation} />
-            </Default>
-            }
-            
-        </>
-    );
+    }, []); */
 }
