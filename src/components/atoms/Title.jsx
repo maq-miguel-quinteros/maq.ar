@@ -1,4 +1,4 @@
-export const Title = ({ variant, level, text}) => {
+export const Title = ({level, text}) => {
 
     return (
         <>

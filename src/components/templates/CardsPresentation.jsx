@@ -14,7 +14,7 @@ export const CardsPresentation = ({cd}) => {
                         level={data.title.level} 
                         text={data.title.text} />
 
-                        {data.cardList.map((dataCardList) => {
+                        {data.cardList && data.cardList.map((dataCardList) => {
                             return (
                             <CardList cd={dataCardList} />)
                         })}

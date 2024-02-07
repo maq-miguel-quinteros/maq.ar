@@ -14,7 +14,7 @@ const DivStyled = styled.div `
     align-items: center;
 `;
 
-export const Header = ({cd = {}}) => {   
+export const Header = ({cd}) => {   
     return (
         <HeaderStyled>
             <DivStyled>
@@ -25,8 +25,7 @@ export const Header = ({cd = {}}) => {
                 alt={cd.profileImage.alt}></Image>
                 <Title                 
                 level={cd.pageTitle.level} 
-                text={cd.pageTitle.text} />
-                
+                text={cd.pageTitle.text} />                
                 
             </DivStyled>
             <SocialContact cd={cd.socialContact} />

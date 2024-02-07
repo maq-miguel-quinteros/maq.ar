@@ -1,15 +1,17 @@
 import { useState, useEffect } from "react";
 
+import DB from './DB.json';
+
 import { Default } from "../components/templates/Default";
 import { CardsPresentation } from "../components/templates/CardsPresentation";
 
-import { collection, getDocs, } from 'firebase/firestore';
-import { dataBase } from "../database/firebase";
+/* import { collection, getDocs, } from 'firebase/firestore';
+import { dataBase } from "../database/firebase"; */
 
 
 export const Home = () => {
 
-    const [prueba, setPrueba] = useState([]);
+    /* const [prueba, setPrueba] = useState([]);
     const [aux, setAux] = useState();
 
     const getComponents = (database, collectionPath) => {
@@ -35,28 +37,16 @@ export const Home = () => {
                 
             })
             
-    }
+    } */
 
-    useEffect(() => {       
+/*     useEffect(() => {       
         console.log(getComponents(dataBase, 'cardPresentation'))
 
-    }, []);
+    }, []); */
 
-    return (
-        <>
-            {/* dataBase && 
-            <Default cd={dataBase}> 
-                <CardsPresentation 
-                    cd={dataBase.cardPresentation} />
-            </Default> */
-            }
+    const [dataBase, setDataBase] = useState([]);
 
-        </>
-    );
-
-    // import DB from './DB.json';
-
-    /*     const getDataBase = () => {
+    const getDataBase = () => {
         return new Promise ((resolve, reject) => {
             resolve(DB);
         })
@@ -65,7 +55,21 @@ export const Home = () => {
     useEffect( () => {
         getDataBase()
             .then((response) => {                
-                setDataBase(response);                
+                setDataBase(response);
+                console.log(dataBase);
             })            
-    }, []); */
+    }, []);
+
+    return (
+        <>
+            {dataBase && 
+            <Default cd={dataBase}> 
+                <CardsPresentation 
+                    cd={dataBase.cardPresentation} />
+            </Default>
+            }
+
+        </>
+    );
+
 }

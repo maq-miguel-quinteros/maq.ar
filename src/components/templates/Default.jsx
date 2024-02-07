@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { NavBar } from "../molecules/NavBar";
 import { Header } from "../organism/Header";
 import { Footer } from '../molecules/Footer';
-import { Children } from 'react';
 
 const DefaultStyled = styled.div`
     height: 100vh;
