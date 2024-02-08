@@ -44,7 +44,7 @@ export const Home = () => {
 
     }, []); */
 
-    const [dataBase, setDataBase] = useState([]);
+    const [dataBase, setDataBase] = useState();
 
     const getDataBase = () => {
         return new Promise ((resolve, reject) => {

@@ -16,6 +16,7 @@ export const SocialContact = ({ cd }) => {
                 return (
                     <DivStyled key={data.href}>
                         <Icon
+                            variant={data.text} 
                             type={data.iconType} />
                         <Anchor
                             href={data.href}
