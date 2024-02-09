@@ -2,20 +2,20 @@ import { Icon } from "../atoms/Icon"
 import { Text } from "../atoms/Text"
 import { Title } from "../atoms/Title"
 
-export const Card = ({cd}) => {
+export const Card = ({ compData }) => {
 
     return (
         
             <div>
                 <Icon 
-                    type={cd.icon.type} />
+                    type={compData.icon.type} />
                 <Title 
-                    variant={cd.title.variant}
-                    level={cd.title.level} 
-                    text={cd.title.text} />                    
+                    variant={compData.title.variant}
+                    level={compData.title.level} 
+                    text={compData.title.text} />                    
                 <Text 
-                    variant={cd.text.variant} 
-                    text={cd.text.text} />
+                    variant={compData.text.variant} 
+                    text={compData.text.text} />
             </div>
         
     )

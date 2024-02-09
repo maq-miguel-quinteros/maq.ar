@@ -1,5 +1,5 @@
 
-export const Text = ({text}) => {
+export const Text = ({variant, text}) => {
     return (
         <p>{text}</p>
     )

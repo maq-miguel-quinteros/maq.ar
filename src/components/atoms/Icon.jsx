@@ -20,7 +20,6 @@ const SpanStyled = styled.span`
     `}
 `;
 
-
 export const Icon = ({ variant, type }) => {
 
     return (

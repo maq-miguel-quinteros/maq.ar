@@ -1,18 +1,17 @@
 import { Title } from "../atoms/Title";
 import { Card } from "../molecules/Card";
 
-export const CardList = ({cd}) => {
-    console.log(cd.cards);
+export const CardList = ({ compData }) => {   
 
     return (
         <>  
             <Title 
-                variant={cd.title.variant} 
-                level={cd.title.level} 
-                text={cd.title.text} />            
-            {cd.cards.map((data) => {
+                variant={compData.title.variant} 
+                level={compData.title.level} 
+                text={compData.title.text} />            
+            {compData.cards.map((data) => {
                 return (
-                <Card cd={data} />)
+                <Card compData={data} />)
             })}
         </>
     );

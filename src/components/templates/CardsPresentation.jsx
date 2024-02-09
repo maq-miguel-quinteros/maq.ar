@@ -1,12 +1,11 @@
 import { Title } from "../atoms/Title";
 import { CardList } from "../organism/CardList";
 
-export const CardsPresentation = ({cd}) => {
-
+export const CardsPresentation = ({ compData }) => {
     
     return (
         <>
-            {cd && cd.map((data) => {                
+            {compData && compData.map((data) => {                
                 return (
                     <>
                         <Title 
@@ -16,7 +15,7 @@ export const CardsPresentation = ({cd}) => {
 
                         {data.cardList && data.cardList.map((dataCardList) => {
                             return (
-                            <CardList cd={dataCardList} />)
+                            <CardList compData={dataCardList} />)
                         })}
                     </>
                 );

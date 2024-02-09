@@ -7,13 +7,11 @@ const FooterStyled = styled.footer `
 
     background-color: red;
     width: 100%;
-    height: 10vh;
-    
-/*     position: fixed;
-    bottom: 0; */
+    height: 10vh;    
+
 `;
 
-export const Footer = ({cd}) => {
+export const Footer = ({compData}) => {
     return (
         <FooterStyled>
             <span>maq.ar © Miguel Ángel Quinteros</span>

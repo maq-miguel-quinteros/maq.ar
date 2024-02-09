@@ -17,14 +17,14 @@ const DivStyled = styled.div `
     align-items: center;
 `;
 
-export const Default = ({cd, children}) => {
+export const Default = ({compData, children}) => {
     
     return (
         <DefaultStyled>
-            <Header cd={cd.header} />
+            <Header compData={compData.header} />
             <DivStyled>
                 {children}
-                <NavBar cd={cd.navbar} />
+                <NavBar compData={compData.navbar} />
             </DivStyled>
             <Footer />
         </DefaultStyled>

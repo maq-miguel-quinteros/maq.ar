@@ -8,11 +8,11 @@ const DivStyled = styled.div`
     align-items: center;
 `;
 
-export const SocialContact = ({ cd }) => {
+export const SocialContact = ({ compData }) => {
 
     return (
         <DivStyled>
-            {cd.map((data) => {
+            {compData.map((data) => {
                 return (
                     <DivStyled key={data.href}>
                         <Icon

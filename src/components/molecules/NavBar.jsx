@@ -7,11 +7,11 @@ const NavStyled = styled.nav`
     flex-direction: column;    
 `;
 
-export const NavBar = ({ cd }) => {
+export const NavBar = ({ compData }) => {
 
     return (
         <NavStyled>
-            {cd && cd.map((data) => {
+            {compData && compData.map((data) => {
                 return (
                     <Anchor
                         key={data.text}

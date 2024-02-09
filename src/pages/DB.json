@@ -4,17 +4,20 @@
             {
                 "iconType": "facebook",
                 "href": "https://www.facebook.com/maq.miguel.quinteros",
-                "text": "facebook"
+                "text": "facebook",
+                "variant": "facebook"
             },
             {
                 "iconType": "instagram",
                 "href": "https://www.instagram.com/maq.miguel.quinteros/",
-                "text": "instagram"
+                "text": "instagram",
+                "variant": "instagram"
             },
             {
                 "iconType": "twitter-x",
                 "href": "https://twitter.com/maq_miguel",
-                "text": "twitter-x"
+                "text": "twitter-x",
+                "variant": "twitter-x"
             }
         ],
         "profileImage": {
@@ -24,7 +27,8 @@
         },
         "pageTitle": {
             "level": "h1",
-            "text": "Miguel Ángel Quinteros"
+            "text": "maq.ar",
+            "variant": "pageTitle"
         }
     },
     "navbar": [

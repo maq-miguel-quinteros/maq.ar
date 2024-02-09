@@ -14,21 +14,22 @@ const DivStyled = styled.div `
     align-items: center;
 `;
 
-export const Header = ({cd}) => {   
+export const Header = ({ compData }) => {   
     return (
         <HeaderStyled>
             <DivStyled>
                 
                 <Image 
-                variant={cd.profileImage.variant} 
-                src={cd.profileImage.src} 
-                alt={cd.profileImage.alt}></Image>
+                variant={compData.profileImage.variant} 
+                src={compData.profileImage.src} 
+                alt={compData.profileImage.alt}></Image>
                 <Title                 
-                level={cd.pageTitle.level} 
-                text={cd.pageTitle.text} />                
+                level={compData.pageTitle.level} 
+                text={compData.pageTitle.text}
+                variant={compData.pageTitle.variant} />                
                 
             </DivStyled>
-            <SocialContact cd={cd.socialContact} />
+            <SocialContact compData={compData.socialContact} />
         </HeaderStyled>
     );
 }
