@@ -7,6 +7,7 @@ import { SocialContact } from "../molecules/SocialContact";
 const HeaderStyled = styled.header `
     display: flex;
     justify-content: space-between;
+    background-color: var(--color-primary-2);
 `;
 
 const DivStyled = styled.div `

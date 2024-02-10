@@ -9,9 +9,11 @@ export const CardList = ({ compData }) => {
                 variant={compData.title.variant} 
                 level={compData.title.level} 
                 text={compData.title.text} />            
-            {compData.cards.map((data) => {
+                {compData.cards.map((data) => {
                 return (
-                <Card compData={data} />)
+                <Card 
+                    key={data.title.text + data.icon.type}
+                    compData={data} />)
             })}
         </>
     );

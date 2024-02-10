@@ -13,11 +13,13 @@ export const NavBar = ({ compData }) => {
         <NavStyled>
             {compData && compData.map((data) => {
                 return (
-                    <Anchor
-                        key={data.text}
+                    
+                        <Anchor
+                        key={data.key}
                         href={data.href}
                         text={data.text}
-                        variant={data.variant} />)
+                        variant={data.variant}/>
+                    )
             })}
         </NavStyled>
     );

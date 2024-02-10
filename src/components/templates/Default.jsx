@@ -5,6 +5,7 @@ import { Header } from "../organism/Header";
 import { Footer } from '../molecules/Footer';
 
 const DefaultStyled = styled.div`
+    background-color: var(--color-primary-1);
     height: 100vh;
     display: flex;
     flex-direction: column;

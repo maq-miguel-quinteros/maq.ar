@@ -7,17 +7,19 @@ export const CardsPresentation = ({ compData }) => {
         <>
             {compData && compData.map((data) => {                
                 return (
-                    <>
-                        <Title 
+                    <div key={data.key}>
+                        <Title
                         variant={data.title.variant}
                         level={data.title.level} 
                         text={data.title.text} />
 
                         {data.cardList && data.cardList.map((dataCardList) => {
                             return (
-                            <CardList compData={dataCardList} />)
+                            <CardList 
+                                key={dataCardList.key}
+                                compData={dataCardList} />)
                         })}
-                    </>
+                    </div>
                 );
             })}            
         </>

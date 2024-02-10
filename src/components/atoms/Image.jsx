@@ -1,14 +1,15 @@
-import styled, {css} from 'styled-components';
+import styled, { css } from 'styled-components';
 
-const ImgStyled = styled.img `
-    ${(props) => props.$variant === 'logo' && css `
-        border: 5px solid var(--color-primary);
+const ImgStyled = styled.img`
+    ${(props) => props.$variant === 'logo' && css`
+        border: 5px solid var(--color-primary-4);
         border-radius: 50%;
         width: 100px;
-        margin: 10px`}
+        margin: 10px`
+    }
 `;
 
-export const Image = ({variant, src, alt}) => {
+export const Image = ({ variant, src, alt }) => {
 
     return (
         <ImgStyled $variant={variant} src={src} alt={alt} />

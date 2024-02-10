@@ -6,6 +6,7 @@ import { Icon } from "../atoms/Icon";
 const DivStyled = styled.div`
     display: flex;
     align-items: center;
+    padding: 0.2em;
 `;
 
 export const SocialContact = ({ compData }) => {
@@ -14,7 +15,8 @@ export const SocialContact = ({ compData }) => {
         <DivStyled>
             {compData.map((data) => {
                 return (
-                    <DivStyled key={data.href}>
+                    <DivStyled 
+                        key={data.key}>
                         <Icon
                             variant={data.text} 
                             type={data.iconType} />
