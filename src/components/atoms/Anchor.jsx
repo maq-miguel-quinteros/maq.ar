@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import styled, { css } from 'styled-components';
 
 const AStyled = styled.a`
@@ -34,16 +36,23 @@ const AStyled = styled.a`
         &:hover {
             transform: translateX(-15px);
             border-radius: 0px 10px 10px 0px;
-
         }
-        &:focus {
-            transform: translateX(-15px);
-            border-radius: 0px 10px 10px 0px;
-        }
+    `}
+    ${(props) => props.$variant === 'navbar-select' && css`        
+        color: var(--color-complement-4);
+        background-color: var(--color-complement-1);
+        font-size: x-large;
+        margin: 5px;
+        padding: 10px 20px;
+        border-radius: 10px 0px 0px 10px;
+        transform: translateX(-15px);
+        border-radius: 0px 10px 10px 0px;
     `}
 `;
 
-export const Anchor = ({ variant, href, text }) => {
+
+
+export const Anchor = ({ variant, href, text }) => {    
 
     return (
         <>
