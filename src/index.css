@@ -10,10 +10,20 @@ body {
   min-height: 100dvh;  
 }
 
+main {
+  flex: 1;
+}
+
+main, nav, aside {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
 h1, h2, h3, h4 {
   text-wrap: balance;
 }
 
 p {
   text-wrap: pretty;
+  
 }

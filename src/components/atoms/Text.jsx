@@ -1,7 +1,9 @@
-import styled from "styled-components"
+import styled, {css} from "styled-components"
 
-const StyledP = styled.p `
-
+const StyledP = styled.p`
+    ${(props) => props.$variant === 'aside' && css`
+        margin:0;
+    `}
 `;
 
 const StyledSpan = styled.span `
@@ -12,7 +14,7 @@ export const Text = ({type, variant, children}) => {
     return (
         <>
             {(!type || type === 'p') && 
-                <p $variant={variant}>{children}</p>}
+                <StyledP $variant={variant}>{children}</StyledP>}
 
             {type === 'span' && 
                 <span $variant={variant}>{children}</span>}

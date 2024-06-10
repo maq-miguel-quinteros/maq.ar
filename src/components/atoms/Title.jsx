@@ -1,9 +1,9 @@
 import styled, {css} from "styled-components"
 
-const StyledH1 = styled.h1 `
-    color: red;
-    ${(props) => props.$variant === 'main' && css `
-        color: green;
+const StyledH1 = styled.h1 `    
+    ${(props) => props.$variant === 'header' && css`
+        font-family: monospace;
+        margin-left: 10%;
     `}
 `;
 
