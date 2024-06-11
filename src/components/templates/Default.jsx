@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components"
+import styled from "styled-components"
 
 import { Header } from "../organisms/Header"
 import { Nav } from "../organisms/Nav"
@@ -17,11 +17,10 @@ import profile from "../../assets/profile.png"
 const StyledDiv = styled.div`
     height: 100dvh;
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;    
 `;
 
-
+// eslint-disable-next-line react/prop-types
 export const Default = ({children}) => {
     return (
         <StyledDiv>            
@@ -58,8 +57,8 @@ export const Default = ({children}) => {
 
             {children}
 
-            <Footer>
-                <Text>Footer</Text>
+            <Footer variant={'footer'}>
+                <Text>maq.miguel.quinteros</Text>
             </Footer>
         </StyledDiv>
     )
