@@ -1,9 +1,18 @@
+import styled from "styled-components"
 
+const StyledAside = styled.aside`
+    padding-left: 2%;
+    padding-right: 2%;
+    margin:1% 0;
+    background-color: grey;
+    color: white;
+    
+`;
 
 export const Aside = ({variant, children}) => {
     return (
-        <aside $variant={variant}>
+        <StyledAside $variant={variant}>
             {children}
-        </aside>
+        </StyledAside>
     )
 }
