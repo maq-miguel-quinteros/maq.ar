@@ -20,6 +20,15 @@ const StyledDiv = styled.div`
     flex-direction: column;    
 `;
 
+const StyledDiv2 = styled.div`
+    display:flex;
+    flex-direction: column;
+
+    @media (min-width: 576px) {
+        flex-direction: row;
+    }
+`;
+
 // eslint-disable-next-line react/prop-types
 export const Default = ({children}) => {
     return (
@@ -28,34 +37,37 @@ export const Default = ({children}) => {
                 <Image src={profile} variant={'header'} alt={'header image'}></Image>
                 <Title level={'h1'} variant={'header'}>Miguel Ángel Quinteros</Title>
             </Header>
-
+            
             <Nav>
                 <Anchor href={'#'} variant={'nav'}>Summary</Anchor>
                 <Anchor href={'#'} variant={'nav'}>Work Experience</Anchor>
                 <Anchor href={'#'} variant={'nav'}>Reference</Anchor>
             </Nav>
 
-            <Aside>
-                <Card variant={'aside'}>
-                    <Title level={'h3'} variant={'aside'}>Contact details</Title>
-                    <Text variant={'aside'}>email@email.com</Text>
-                    <Text variant={'aside'}>381 5 355225</Text>
-                    <Text variant={'aside'}>Av. Francisco de Aguirre 140, CP4000</Text>
-                </Card>
-                <Card variant={'aside'}>
-                    <Title level={'h3'} variant={'aside'}>Education</Title>
-                    <Text variant={'aside'}>Ingeniería en Sistemas</Text>
-                    <Text variant={'aside'}>Profesorado de Historia</Text>
-                    <Text variant={'aside'}>Licenciatura en Tecnología Educativa</Text>
-                </Card>
-                <Card variant={'aside'}>
-                    <Title level={'h3'} variant={'aside'}>Skills</Title>
-                    <Text variant={'aside'}>Ingles intermedio</Text>
-                    <Text variant={'aside'}>Programación JAVA, React</Text>
-                </Card>
-            </Aside>
+            <StyledDiv2>
+                <Aside>
+                    <Card variant={'aside'}>
+                        <Title level={'h3'} variant={'aside'}>Contact details</Title>
+                        <Text variant={'aside'}>email@email.com</Text>
+                        <Text variant={'aside'}>381 5 355225</Text>
+                        <Text variant={'aside'}>Av. Francisco de Aguirre 140, CP4000</Text>
+                    </Card>
+                    <Card variant={'aside'}>
+                        <Title level={'h3'} variant={'aside'}>Education</Title>
+                        <Text variant={'aside'}>Ingeniería en Sistemas</Text>
+                        <Text variant={'aside'}>Profesorado de Historia</Text>
+                        <Text variant={'aside'}>Licenciatura en Tecnología Educativa</Text>
+                    </Card>
+                    <Card variant={'aside'}>
+                        <Title level={'h3'} variant={'aside'}>Skills</Title>
+                        <Text variant={'aside'}>Ingles intermedio</Text>
+                        <Text variant={'aside'}>Programación JAVA, React</Text>
+                    </Card>
+                </Aside>
 
-            {children}
+                {children}
+
+            </StyledDiv2>
 
             <Footer variant={'footer'}>
                 <Text>maq.miguel.quinteros</Text>

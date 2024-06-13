@@ -9,7 +9,7 @@ const StyledA = styled.a`
         border: 1px solid antiquewhite;
         border-radius: 10px;
         display: inline-block;
-        width: 125px;
+        width: 90px;
         padding: 5px;
         margin: 1px;
         text-align: center;
