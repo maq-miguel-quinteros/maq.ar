@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 const StyledAside = styled.aside`
+    
     padding-left: 2%;
     padding-right: 2%;
     margin:0;

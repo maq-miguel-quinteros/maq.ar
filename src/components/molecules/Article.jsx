@@ -15,6 +15,10 @@ const StyledArticle = styled.article`
     ${(props) => props.$variant === 'reference' && css`
         background-color: blue;
     `}
+
+    @media (min-width: 1200px){
+        max-width: 49%;
+    } 
 `;
 
 export const Article = ({variant, children}) => {

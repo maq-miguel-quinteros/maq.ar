@@ -10,6 +10,10 @@ const StyledNav = styled.nav`
 
     @media (min-width: 576px) {
         background-color: #36383e;
+        justify-content: end;
+    }
+    @media (min-width: 1200px){
+        display: none;
     }
 `;
 

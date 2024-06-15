@@ -9,6 +9,10 @@ import styled from "styled-components"
 
 const StyledMain = styled.main`
     
+    @media (min-width: 576px) {
+        padding-top: 20px;
+    }    
+    
 `;
 
 export const HomeTemplate = () => {

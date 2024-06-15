@@ -28,3 +28,11 @@ p {
   text-wrap: pretty;
   
 }
+
+/*
+  576px para teléfonos móviles
+  768px para las tabletas
+  992px para portátiles
+  1200px para los grandes dispositivos
+  1400px para extra grandes
+  */

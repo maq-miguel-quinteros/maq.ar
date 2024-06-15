@@ -17,12 +17,13 @@ import profile from "../../assets/profile.png"
 const StyledDiv = styled.div`
     height: 100dvh;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
 `;
 
 const StyledDiv2 = styled.div`
     display:flex;
     flex-direction: column;
+    flex: 1;
 
     @media (min-width: 576px) {
         flex-direction: row;

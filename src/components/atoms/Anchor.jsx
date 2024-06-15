@@ -13,6 +13,10 @@ const StyledA = styled.a`
         padding: 5px;
         margin: 1px;
         text-align: center;
+
+        @media (min-width: 576px){
+            margin-bottom: -10px;
+        }
     `}
 `;
 
