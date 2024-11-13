@@ -1,4 +1,4 @@
-import { BiMoon, BiSun } from 'react-icons/bi'
+import { BiCurrentLocation, BiEnvelope, BiMoon, BiPhone, BiSun } from 'react-icons/bi'
 import image from '/public/profile.png'
 
 export default function HeaderLeft({darkMode, toggleDarkMode}) {
@@ -26,7 +26,22 @@ export default function HeaderLeft({darkMode, toggleDarkMode}) {
                         }
                     </button>
                 </div>
-
+                <div className="flex flex-col items-start justify-start gap-5 border-b p-5 dark:border-gray-700">
+                    <ul className='space-y-3'>
+                        <li className='flex items-center gap-2'>
+                            <BiCurrentLocation className='text-xl' />
+                            <span>Av. Francisco de Aguirre 140</span>
+                        </li>
+                        <li className='flex items-center gap-2'>
+                            <BiEnvelope className='text-xl' />
+                            <span>maq.miguel.quinteros@gmail.com</span>
+                        </li>
+                        <li className='flex items-center gap-2'>
+                            <BiPhone className='text-xl' />
+                            <span>+54 0381 155 355225</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     )
