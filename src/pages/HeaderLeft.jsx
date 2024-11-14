@@ -1,16 +1,17 @@
 import { BiCurrentLocation, BiEnvelope, BiLogoGithub, BiLogoLinkedin, BiMoon, BiPhone, BiSun } from 'react-icons/bi'
-import image from '/public/profile.png'
+import image from '../assets/profile.png'
 import AsideCard from '../components/atoms/AsideCard'
 import LiDot from '../components/atoms/LiDot'
 import SpanItem from '../components/atoms/SpanItem'
 
+// eslint-disable-next-line react/prop-types
 export default function HeaderLeft({darkMode, toggleDarkMode}) {
 
     return (
         <div className="
         min-h-screen flex-1 relative p-10 transition-all duration-500
         sm:border-r
-        dark:bg-black dark:text-white dark:border-gray-700">
+        dark:bg-zinc-950 dark:text-zinc-50 dark:border-zinc-700">
             
             <div className="flex flex-col gap-5">
                 <div className="flex flex-col items-center justify-center gap-5">
