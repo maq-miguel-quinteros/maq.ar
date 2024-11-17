@@ -7,38 +7,38 @@ export default function Home() {
         <div className="min-h-screen flex-[3] transition-all duration-500 dark:bg-zinc-950 dark:text-zinc-50">
             <main className="flex max-w-[1000px] flex-col gap-10 p-5 md:mx-10 md:py-14">
                 <div className="space-y-5">
-                    <h1 className="text-2xl font-bold md:text-4xl">About</h1>
-                    <p className="text-sm text-zinc-600 dark:text-zinc-400 md:text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis neque porro delectus cupiditate voluptatem iste magni aliquid eius vitae, autem laudantium deserunt tenetur, ab excepturi rerum veritatis qui, vel veniam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint animi quam error ipsam adipisci, alias aspernatur sequi quidem iste neque rem ad molestiae harum aliquid, facere id vel voluptatibus earum.</p>
+                    <h1 className="text-2xl font-bold md:text-4xl">Sobre mí</h1>
+                    <p className="text-sm text-zinc-600 dark:text-zinc-400 md:text-base">Estoy interesando en varios aspectos de la cultura como la historia, la música y el cine, así como también en los cambios de los medios comunicación y la tecnología de la información, que me gustan a conocer y estudiar, muchas veces por mi cuenta y otras mediante cursos de formación. También. Estoy particularmente interesado en la programación para la web, en lo relacionado al manejo de bases de datos desde el backend y la lógica para la presentación de esos datos en el frontend. Busco aprender más sobre los lenguajes de programación ya conozco, en lo relacionado a estructura de proyectos, frameworks o librerías de uso en la actualidad. Soy proactivo y busco actualizarme constantemente.</p>
                 </div>
                 <div className="space-y-10">
-                    <h2 className="text-1xl font-bold md:text-3xl">Experience</h2>
+                    <h2 className="text-1xl font-bold md:text-3xl">Experiencia profesional</h2>
                     <div className="flex flex-col lg:flex-row lg:gap-20">
                         <ul>
                             <LiDot 
-                                field='Trabajo remunerado'
-                                place='Nunca jamas'
-                                year='2021-2023'
-                                detail='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis neque porro delectus cupiditate voluptatem iste magni aliquid eius vitae, autem laudantium deserunt tenetur, ab excepturi rerum veritatis qui, vel'
+                                field='Analista de Sistemas'
+                                place='Banco Macro'
+                                year='2015 al presente'
+                                detail='Analista de sistemas en el área de TI'
                             />
                             <LiDot 
-                                field='Trabajo remunerado'
-                                place='Nunca jamas'
-                                year='2021-2023'
-                                detail='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis neque porro delectus cupiditate voluptatem iste magni aliquid eius vitae, autem laudantium deserunt tenetur, ab excepturi rerum veritatis qui, vel'
+                                field='Operador Telefónico'
+                                place='Atento Argentina S.A.'
+                                year='2011-2014'
+                                detail='Soporte técnico de la Mesa de Ayuda de Telefónica (T-LATAM).'
                             />
                         </ul>
                         <ul>
                             <LiDot 
-                                field='Trabajo remunerado'
-                                place='Nunca jamas'
-                                year='2021-2023'
-                                detail='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis neque porro delectus cupiditate voluptatem iste magni aliquid eius vitae, autem laudantium deserunt tenetur, ab excepturi rerum veritatis qui, vel'
+                                field='Operador Telefónico'
+                                place='Teleperformance'
+                                year='2008-2011'
+                                detail='Soporte técnico de la Mesa de Ayuda de Arnet'
                             />
                             <LiDot 
-                                field='Trabajo remunerado'
-                                place='Nunca jamas'
-                                year='2021-2023'
-                                detail='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis neque porro delectus cupiditate voluptatem iste magni aliquid eius vitae, autem laudantium deserunt tenetur, ab excepturi rerum veritatis qui, vel'
+                                field='Soporte técnico'
+                                place='S.I. Servicios Informáticos'
+                                year='2007'
+                                detail="Soporte técnico general. Reparación de validadoras y ticketeras. Instalación y reparación de CPU's. Servicio de backup de datos."
                             />
                             
                         </ul>
@@ -47,16 +47,20 @@ export default function Home() {
                     </div>
                 </div>
                 <div className='max-w-3xl space-y-8'>
-                    <h2 className="text-1xl font-bold md:text-3xl">Certificates</h2>
+                    <h2 className="text-1xl font-bold md:text-3xl">Educación</h2>
                     <CertificateCard 
-                        title='Certificate of algo en algo'
-                        text='Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, at quis? Beatae porro dicta deleniti nam nobis aperiam, sit maxime? Veritatis quia consequatur vero labore expedita tenetur aliquid minima nulla!'/>
+                        title='Licenciatura en Historia (tesis pendiente)'
+                        text='Universidad Nacional de Santiago del Estero'
+                    />
                     <CertificateCard 
-                        title='Certificate of algo en algo'
-                        text='Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, at quis? Beatae porro dicta deleniti nam nobis aperiam, sit maxime? Veritatis quia consequatur vero labore expedita tenetur aliquid minima nulla!'/>
+                        title='Licenciatura en Tecnología Educativa (tesis pendiente)'
+                        text='U.T.N. Facultad Regional Tucumán'/>
                     <CertificateCard 
-                        title='Certificate of algo en algo'
-                        text='Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, at quis? Beatae porro dicta deleniti nam nobis aperiam, sit maxime? Veritatis quia consequatur vero labore expedita tenetur aliquid minima nulla!'/>                   
+                        title='Profesorado de Historia'
+                        text='I.E.S. Prof. Manuel Marchetti'/>
+                    <CertificateCard 
+                        title='Ingeniería en Sistemas de Información (cursado hasta 3er año)'
+                        text='U.T.N. Facultad Regional Tucumán'/>                   
                 </div>
                 <div className='space-y-10'>
                     <h2 className="text-2xl font-bold md:text-4xl">References</h2>                    

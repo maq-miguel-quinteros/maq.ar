@@ -44,31 +44,40 @@ export default function HeaderLeft({darkMode, toggleDarkMode}) {
                     </ul>
                 </AsideCard>
 
-                <AsideCard title='SOCIAL'>
+                <AsideCard title='REDES SOCIALES'>
                     <ul className='space-y-3'>
                         <li className='flex items-center gap-2'>
                             <BiLogoGithub className='text-xl' />
-                            <span>@maq-miguel-quinteros</span>
+                            <span><a className='dark:hover:bg-zinc-700' href='https://github.com/maq-miguel-quinteros' target='_blank' >@maq-miguel-quinteros</a></span>
                         </li>
                         <li className='flex items-center gap-2'>
                             <BiLogoLinkedin className='text-xl' />
-                            <span>@maq-miguel-quinteros</span>
+                            <span><a className='dark:hover:bg-zinc-700' href='https://www.linkedin.com/in/maq-miguel-quinteros/' target='_blank'>@maq-miguel-quinteros</a></span>
                         </li>                        
                     </ul>
                 </AsideCard>
 
-                <AsideCard title='EDUCATION'>
+                <AsideCard title='CURSOS'>
                     <ul>
-                        <LiDot
-                            field='Programador'
-                            place='Universidad de colorado'
-                            year='2020-2024'
+                        <LiDot 
+                            field='Desarrollador Web JAVA'
+                            place='MindHub'
+                            year='2023'
                         />
                         <LiDot 
-                            field='Prueba 2'
-                            place='Carolina'
-                            year='2014-2018'
+                            field='Desarrollador Web Front End'
+                            place='MindHub'
+                            year='2023'
                         />
+                        <LiDot 
+                            field='Reparador de PC'
+                            place='INI Computación'
+                            year='2003'
+                        />
+                        <LiDot
+                            field='Operador de PC'                            
+                            year='1999'
+                        />                        
                     </ul>
                 </AsideCard>
                 
@@ -81,27 +90,29 @@ export default function HeaderLeft({darkMode, toggleDarkMode}) {
                             <SpanItem name='React' />
                         </div>
                         <div className='flex flex-wrap gap-3'>
+                            <SpanItem name='JAVA'/>
                             <SpanItem name='Python'/>
                             <SpanItem name='PostgreSQL'/>
                         </div>
                     </div>
                     
                 </AsideCard>
-                <AsideCard title='HOBBIES'>
+                <AsideCard title='INTERESES'>
                     <div className='flex flex-wrap gap-16 p-3'>
                         <ul className='flex list-disc flex-col gap-3'>
-                            <li>Estudiar</li>
-                            <li>Películas</li>
-                            <li>VideGames</li>
+                            <li>Literatura de ciencia ficción</li>
+                            <li>Música</li>
+                            <li>Cine clásico</li>
+                            <li>Juegos de estrategia</li>                            
                         </ul>
                         <ul className='flex list-disc flex-col gap-3'>
-                            <li>Prueba 2</li>
-                            <li>algo algo</li>
-                            <li>Cosas</li>
+                            <li>Bandas de rock en vivo</li>
+                            <li>Bailar salsa</li>
+                            <li>Frontón</li>
                         </ul>
                     </div>
                 </AsideCard>
-                <AsideCard title='LANGUAGES'>
+                <AsideCard title='IDIOMAS'>
                     <ul className='flex list-disc flex-col gap-3'>
                         <li>Español</li>
                         <li>Ingles</li>
