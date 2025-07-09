@@ -17,3 +17,7 @@ npm i gh-pages
 ```
 
 Una vez instalador el módulo podemos desplegar la carpeta dist mediante el siguiente comando `gh-pages -d build`. 
+
+# GitHub mediante workflows
+
+Configuramos en base a este video [vite+workflows+githubPages](https://www.youtube.com/watch?v=NZ_2rWgjias)
