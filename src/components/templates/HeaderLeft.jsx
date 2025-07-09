@@ -1,8 +1,8 @@
 import { BiCurrentLocation, BiEnvelope, BiLogoGithub, BiLogoLinkedin, BiMoon, BiPhone, BiSun } from 'react-icons/bi'
-import image from '../assets/profile.png'
-import AsideCard from '../components/atoms/AsideCard'
-import LiDot from '../components/atoms/LiDot'
-import SpanItem from '../components/atoms/SpanItem'
+import image from '../../assets/profile.png'
+import AsideCard from '../atoms/AsideCard'
+import LiDot from '../atoms/LiDot'
+import SpanItem from '../atoms/SpanItem'
 
 // eslint-disable-next-line react/prop-types
 export default function HeaderLeft({darkMode, toggleDarkMode}) {
@@ -81,7 +81,7 @@ export default function HeaderLeft({darkMode, toggleDarkMode}) {
                     </ul>
                 </AsideCard>
                 
-                <AsideCard title='SKILLS'>
+                <AsideCard title='HABILIDADES'>
                     <div className='flex flex-wrap gap-3'>
                         <div className='flex flex-wrap gap-3'>
                             <SpanItem name='HTML'/>
