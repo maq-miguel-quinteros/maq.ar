@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
-import HeaderLeft from "../components/templates/HeaderLeft"
-import HomeTemplate from "../components/templates/HomeTemplate"
+import TechnologicalLeft from "../components/templates/TechnologicalLeft"
+import TechnologicalBody from "../components/templates/TechnologicalBody"
 
-function Home() {
+function Technological() {
     // window.matchMedia... devuelve true si el tema del sistema (windows, android) es dark
     const [darkMode, setDarkMode] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches)
 
@@ -18,10 +18,10 @@ function Home() {
     return (
         <div className={`main-h-screen w-full flex flex-col sm:flex-row subpixel-antialiased 
     ${darkMode ? "bg-zinc-950" : "bg-zinc-50"}`}>
-            <HeaderLeft darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-            <HomeTemplate />
+            <TechnologicalLeft darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+            <TechnologicalBody />
         </div>
     )
 }
 
-export default Home
+export default Technological

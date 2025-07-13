@@ -2,7 +2,7 @@ import CertificateCard from '../atoms/CertificateCard'
 import LiDot from '../atoms/LiDot'
 import ReferenceCard from '../atoms/ReferenceCard'
 
-export default function HomeTemplate() {
+export default function TechnologicalBody() {
     return (
         <div className="min-h-screen flex-[3] transition-all duration-500 dark:bg-zinc-950 dark:text-zinc-50">
             <main className="flex max-w-[1000px] flex-col gap-10 p-5 md:mx-10 md:py-14">

@@ -1,14 +1,15 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom"
 
-import Home from "./pages/Home"
+import Technological from "./pages/Technological"
+import Artistic from "./pages/Artistic"
 
 function App() {
   return (
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/libros/03" element={<p>Aquí vamos a poner información respecto del libro</p>}/>
+          <Route path="/" element={<Technological/>} />
+          <Route path="/artistico" element={<Artistic />}/>
         </Routes>
       </Router>
     </>

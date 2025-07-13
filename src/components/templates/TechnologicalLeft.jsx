@@ -3,9 +3,11 @@ import image from '../../assets/profile.png'
 import AsideCard from '../atoms/AsideCard'
 import LiDot from '../atoms/LiDot'
 import SpanItem from '../atoms/SpanItem'
+import Menu from '../atoms/Menu'
+import MenuItem from '../atoms/MenuItem'
 
 // eslint-disable-next-line react/prop-types
-export default function HeaderLeft({darkMode, toggleDarkMode}) {
+export default function TechnologicalLeft({darkMode, toggleDarkMode}) {
 
     return (
         <div className="
@@ -17,7 +19,7 @@ export default function HeaderLeft({darkMode, toggleDarkMode}) {
                 <div className="flex flex-col items-center justify-center gap-5">
                     <img src={image} alt="profile" className='w-32 rounded-full' />
                     <div className='text-center space-y-1'>
-                        <h2 className='text-4xl font-light '>Miguel <span className='font-semibold'>Quinteros</span></h2>
+                        <h2 className='text-4xl font-light '>Miguel Ángel <span className='font-semibold'>Quinteros</span></h2>
                         <h4 className='text-xl font-light'>Desarrollador FullStack</h4>
                     </div>
                     <button className='absolute right-10 top-10' onClick={toggleDarkMode}>
@@ -26,12 +28,24 @@ export default function HeaderLeft({darkMode, toggleDarkMode}) {
                         (<BiMoon className='text-2xl'/>)}
                     </button>
                 </div>
-
+                {/**
+                <Menu>
+                    <div className='flex flex-wrap gap-3'>
+                        <div className='flex flex-wrap gap-3'>
+                            <MenuItem 
+                            name='laboral' 
+                            path={'/'}/>
+                            <MenuItem name='artístico'
+                            path={'artistico'}/>                          
+                        </div>
+                    </div>
+                </Menu>
+                     */}
                 <AsideCard>
                     <ul className='space-y-3'>
                         <li className='flex items-center gap-2'>
                             <BiCurrentLocation className='text-xl' />
-                            <span>Av. Francisco de Aguirre 140</span>
+                            <span>Av. Francisco de Aguirre 140, CP4000</span>
                         </li>
                         <li className='flex items-center gap-2'>
                             <BiEnvelope className='text-xl' />
