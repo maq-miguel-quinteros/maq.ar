@@ -1,9 +1,9 @@
 import { BiCurrentLocation, BiEnvelope, BiLogoBlogger, BiMoon, BiPhone, BiSun, BiSolidBook, BiLogoYoutube, BiLogoFacebookCircle, BiLogoInstagramAlt, BiLogoTwitter } from 'react-icons/bi'
-import { SiWattpad } from "react-icons/si";
+import { SiWattpad } from "react-icons/si"
+import ArtisticBookItem from '../atoms/ArtiscticBookItem'
 import image from '../../assets/profile.png'
 import ArtisticAsideCard from '../atoms/ArtisticAsideCard'
 import ArtisticLiDot from '../atoms/ArtisticLiDot'
-import SpanItem from '../atoms/SpanItem'
 import ArtisticMenu from '../atoms/ArtisticMenu'
 import ArtisticMenuItem from '../atoms/ArtisticMenuItem'
 
@@ -35,9 +35,14 @@ export default function ArtisticLeft({ darkMode, toggleDarkMode }) {
                         <div className='flex flex-wrap gap-3'>
                             <ArtisticMenuItem
                                 name='laboral'
-                                path={'/'} />
-                            <ArtisticMenuItem name='artístico'
-                                path={'artistico'} />
+                                path={'/'}
+                                isActive={true}
+                            />
+                            <ArtisticMenuItem
+                                name='artístico'
+                                path={'artistico'}
+                                isActive={false}
+                            />
                         </div>
                     </div>
                 </ArtisticMenu>
@@ -64,21 +69,38 @@ export default function ArtisticLeft({ darkMode, toggleDarkMode }) {
                         <li>
                             <div className='flex items-center gap-2'>
                                 <BiSolidBook className='text-2xl text-red-900' />
-                                <span><a className='dark:hover:bg-red-700 hover:bg-red-700 hover:text-yellow-50' href='#' target='' >La Casa de los Espejos</a></span>
+                                <ArtisticBookItem
+                                    isActive={true}
+                                    path='/artistico/libros/03'>
+                                    <span className='dark:hover:bg-red-700 hover:bg-red-700 hover:text-yellow-50'>
+                                        La Casa de los Espejos</span>
+                                </ArtisticBookItem>
                             </div>
                             <span className='text-xs font-light'>Puerta Roja Ediciones. ISBN: 978-987-1992-50-8</span>
                         </li>
                         <li >
                             <div className='flex items-center gap-2'>
                                 <BiSolidBook className='text-4xl text-slate-900 dark:text-slate-900' />
-                                <span><a className='dark:hover:bg-slate-700 hover:bg-slate-700 hover:text-yellow-50' href='#' target=''>Algunas Notas Sobre las Reuniones del Club de Ideadores Taciturnos</a></span>
+                                <ArtisticBookItem
+                                    isActive={false}
+                                    path='/artistic/libros/02'>
+                                    <span className='dark:hover:bg-slate-700 hover:bg-slate-700 hover:text-yellow-50'>
+                                        Algunas Notas Sobre las Reuniones del Club de Ideadores Taciturnos
+                                    </span>
+                                </ArtisticBookItem>
                             </div>
                             <span className='text-xs font-light'>Ediciones del Parque. ISBN: 978-987-1992-50-8</span>
                         </li>
                         <li >
                             <div className='flex items-center gap-2'>
                                 <BiSolidBook className='text-4xl dark:text-green-900 text-green-900' />
-                                <span><a className='dark:hover:bg-green-700 hover:bg-green-700 hover:text-yellow-50' href='#' target=''>Ernesto Pérez Pascualino y sus Cuentos de Ciencia-Ficción Popular</a></span>
+                                <ArtisticBookItem
+                                isActive={false}
+                                path='/artistico/libros/01'>
+                                    <span className='dark:hover:bg-green-700 hover:bg-green-700 hover:text-yellow-50'>
+                                    Ernesto Pérez Pascualino y sus Cuentos de Ciencia-Ficción Popular
+                                    </span>
+                                </ArtisticBookItem>
                             </div>
                             <span className='text-xs font-light'>Ediciones del Parque. ISBN: 978-987-33-2539-7</span>
 

@@ -27,20 +27,23 @@ export default function TechnologicalLeft({darkMode, toggleDarkMode}) {
                         (<BiSun className='text-2xl'/>):
                         (<BiMoon className='text-2xl'/>)}
                     </button>
-                </div>
-                {/**
+                </div>                
                 <Menu>
                     <div className='flex flex-wrap gap-3'>
                         <div className='flex flex-wrap gap-3'>
                             <MenuItem 
                             name='laboral' 
-                            path={'/'}/>
-                            <MenuItem name='artístico'
-                            path={'artistico'}/>                          
+                            path={'/'}
+                            isActive={false}
+                            />
+                            <MenuItem 
+                            name='artístico'
+                            path={'artistico'}
+                            isActive={true}
+                            />                          
                         </div>
                     </div>
                 </Menu>
-                     */}
                 <AsideCard>
                     <ul className='space-y-3'>
                         <li className='flex items-center gap-2'>
