@@ -547,6 +547,7 @@ body::before {
     color: var(--color-accent);
     margin-bottom: 5px;
     font-family: 'Oswald', sans-serif;
+    padding-top: 25px;
 }
 
 .event {
