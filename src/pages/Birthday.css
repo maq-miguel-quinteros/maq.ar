@@ -312,74 +312,134 @@ body::before {
     color: var(--color-primary);
 }
 
-/* Galería de fotos - Carrusel */
+/* Galería de fotos - Carrusel Adaptativo */
 .photo-carousel {
     position: relative;
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
     overflow: hidden;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    border: 2px solid var(--color-primary);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border: 3px solid var(--color-primary);
+    background: linear-gradient(135deg, var(--color-dark), var(--color-primary));
 }
 
 .carousel-container {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    height: 500px;
 }
 
 .carousel-slide {
     min-width: 100%;
-    height: 400px;
+    height: 100%;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
-    color: white;
-    background-size: cover;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-dark));
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
     position: relative;
 }
 
-.carousel-slide::after {
-    content: "";
+.carousel-overlay {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    background: linear-gradient(135deg,
+            rgba(139, 0, 0, 0.1) 0%,
+            rgba(47, 27, 27, 0.3) 50%,
+            rgba(30, 15, 15, 0.5) 100%);
 }
 
 .slide-content {
-    background: rgba(47, 27, 27, 0.7);
-    padding: 20px;
-    border-radius: 5px;
+    background: rgba(47, 27, 27, 0.1);
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin-bottom: 10px;
     text-align: center;
-    max-width: 80%;
-    z-index: 1;
-    border: 1px solid var(--color-gray);
-    font-family: 'Special Elite', cursive;
+    max-width: 70%;
+    border: 2px solid var(--color-accent);
+    backdrop-filter: blur(10px);
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(220, 20, 60, 0.1),
+            transparent);
+    transition: left 0.6s ease;
+}
+
+.slide-content:hover::before {
+    left: 100%;
 }
 
 .slide-content h3 {
     font-family: 'Oswald', sans-serif;
     color: var(--color-accent);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    position: relative;
 }
 
+.slide-content h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--color-accent);
+    border-radius: 2px;
+}
+
+.slide-content p {
+    font-family: 'Special Elite', cursive;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--color-light);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    margin: 0;
+}
+
+/* Botones del carrusel */
 .carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(47, 27, 27, 0.7);
+    background: rgba(47, 27, 27, 0.8);
     border: 2px solid var(--color-accent);
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     font-size: 1.5rem;
     color: var(--color-light);
@@ -389,41 +449,96 @@ body::before {
     justify-content: center;
     transition: all 0.3s ease;
     z-index: 10;
+    backdrop-filter: blur(5px);
 }
 
 .carousel-btn:hover {
     background: var(--color-accent);
     transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 5px 20px rgba(220, 20, 60, 0.4);
 }
 
 .prev-btn {
-    left: 15px;
+    left: 20px;
 }
 
 .next-btn {
-    right: 15px;
+    right: 20px;
 }
 
+/* Puntos de navegación */
 .carousel-dots {
     display: flex;
     justify-content: center;
-    margin-top: 15px;
-    gap: 10px;
+    margin-top: 20px;
+    gap: 12px;
 }
 
 .dot {
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
     background: var(--color-primary);
     cursor: pointer;
     transition: all 0.3s ease;
-    border: 1px solid var(--color-dark);
+    border: 2px solid var(--color-dark);
+    position: relative;
+}
+
+.dot::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border: 1px solid var(--color-accent);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.dot:hover::before {
+    opacity: 1;
 }
 
 .dot.active {
     background: var(--color-accent);
-    transform: scale(1.2);
+    transform: scale(1.3);
+    box-shadow: 0 0 15px rgba(220, 20, 60, 0.6);
+}
+
+.dot.active::before {
+    opacity: 1;
+}
+
+/* Efectos de borde para el carrusel */
+.photo-carousel::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg,
+            var(--color-accent),
+            var(--color-primary),
+            var(--color-accent));
+    border-radius: 12px;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.photo-carousel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgba(220, 20, 60, 0.3);
+    border-radius: 10px;
+    pointer-events: none;
 }
 
 /* QR para donaciones */
@@ -547,7 +662,6 @@ body::before {
     color: var(--color-accent);
     margin-bottom: 5px;
     font-family: 'Oswald', sans-serif;
-    padding-top: 25px;
 }
 
 .event {
@@ -678,10 +792,40 @@ body::before {
     box-shadow: 0 0 15px rgba(220, 20, 60, 0.6);
 }
 
+.music-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.music-btn:disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+
 .play-btn {
     width: 45px;
     height: 45px;
     font-size: 1.1rem;
+}
+
+.mode-btn.active {
+    background: linear-gradient(135deg, var(--color-accent), #ff6b6b);
+    box-shadow: 0 0 10px rgba(220, 20, 60, 0.5);
+}
+
+.mode-btn:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(47, 27, 27, 0.9);
+    color: var(--color-light);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    z-index: 1000;
 }
 
 /* Equalizador animado */
@@ -740,6 +884,13 @@ body::before {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.play-mode-indicator {
+    margin-left: 8px;
+    color: var(--color-accent);
+    font-size: 0.7rem;
+    opacity: 0.8;
 }
 
 @keyframes pulse {
@@ -824,13 +975,54 @@ body::before {
     padding: 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
-.playlist-header h3 {
+.playlist-title {
+    flex: 1;
+}
+
+.playlist-title h3 {
     font-family: 'Oswald', sans-serif;
     margin: 0;
     font-size: 1.3rem;
+}
+
+.playlist-stats {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin-top: 5px;
+    font-family: 'Special Elite', cursive;
+}
+
+.playlist-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.action-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--color-light);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.mode-action.active {
+    background: rgba(220, 20, 60, 0.3);
+    border-color: var(--color-accent);
 }
 
 .close-playlist {
@@ -857,7 +1049,6 @@ body::before {
 
 .song-item {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 15px;
     margin: 5px 0;
@@ -890,6 +1081,18 @@ body::before {
     animation-delay: 0.5s;
 }
 
+.song-item:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.song-item:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.song-item:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
 @keyframes slideInItem {
     to {
         transform: translateX(0);
@@ -906,6 +1109,26 @@ body::before {
 .song-item.active {
     background: linear-gradient(135deg, rgba(139, 0, 0, 0.2), rgba(47, 27, 27, 0.1));
     border-color: var(--color-accent);
+}
+
+.song-number {
+    width: 25px;
+    height: 25px;
+    background: rgba(139, 0, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.song-item.active .song-number {
+    background: var(--color-accent);
+    color: var(--color-light);
 }
 
 .song-info {
@@ -947,6 +1170,23 @@ body::before {
     60% {
         transform: translateY(-2px);
     }
+}
+
+.playlist-footer {
+    background: rgba(139, 0, 0, 0.05);
+    padding: 12px 20px;
+    border-top: 1px solid rgba(139, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: var(--color-gray);
+    font-family: 'Special Elite', cursive;
+}
+
+.playlist-footer i {
+    color: var(--color-accent);
 }
 
 /* Alerta de música */
@@ -1000,6 +1240,52 @@ body::before {
     font-family: 'Special Elite', cursive;
 }
 
+.random-indicator {
+    background: rgba(139, 0, 0, 0.1);
+    border: 1px solid var(--color-accent);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Special Elite', cursive;
+    color: var(--color-primary);
+}
+
+.random-indicator i {
+    color: var(--color-accent);
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.play-mode-info {
+    background: rgba(139, 0, 0, 0.1);
+    border: 1px solid var(--color-primary);
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Special Elite', cursive;
+    color: var(--color-primary);
+    font-size: 0.9rem;
+}
+
+.play-mode-info i {
+    color: var(--color-accent);
+}
+
 .alert-btn {
     background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
     color: var(--color-light);
@@ -1031,8 +1317,45 @@ body::before {
         flex-wrap: wrap;
     }
 
-    .carousel-slide {
-        height: 300px;
+    .carousel-container {
+        height: 400px;
+    }
+
+    .slide-content {
+        padding: 20px 25px;
+        max-width: 85%;
+    }
+
+    .slide-content h3 {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+
+    .slide-content p {
+        font-size: 1rem;
+    }
+
+    .carousel-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .prev-btn {
+        left: 10px;
+    }
+
+    .next-btn {
+        right: 10px;
+    }
+
+    .carousel-dots {
+        margin-top: 15px;
+    }
+
+    .dot {
+        width: 12px;
+        height: 12px;
     }
 
     .timeline::after {
@@ -1093,152 +1416,60 @@ body::before {
         width: 150px;
         height: 150px;
     }
-}
 
-/* ===== ESTILOS PARA LA FUNCIONALIDAD ALEATORIA ===== */
-
-/* Indicador de canción aleatoria en la alerta */
-.random-indicator {
-    background: rgba(139, 0, 0, 0.1);
-    border: 1px solid var(--color-accent);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 15px 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'Special Elite', cursive;
-    color: var(--color-primary);
-}
-
-.random-indicator i {
-    color: var(--color-accent);
-    animation: spin 3s linear infinite;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-/* Botón de canción aleatoria */
-.random-btn {
-    position: relative;
-}
-
-.random-btn:hover::after {
-    content: "Aleatoria";
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(47, 27, 27, 0.9);
-    color: var(--color-light);
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.7rem;
-    white-space: nowrap;
-}
-
-/* Icono aleatorio en now-playing */
-.random-icon {
-    margin-left: 8px;
-    color: var(--color-accent);
-    font-size: 0.7rem;
-    animation: bounce 2s infinite;
-}
-
-.random-small {
-    margin-left: 5px;
-    color: var(--color-accent);
-    font-size: 0.6rem;
-}
-
-/* Acciones de la playlist */
-.playlist-actions {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.action-btn {
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: var(--color-light);
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-.action-btn:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: scale(1.1);
-}
-
-.random-action:hover {
-    animation: spin 1s linear;
-}
-
-/* Estados de carga */
-.music-btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-.music-btn:disabled:hover {
-    transform: none;
-    box-shadow: none;
-}
-
-/* Efecto de sorpresa para la primera carga */
-@keyframes surprisePop {
-    0% {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-
-    50% {
-        transform: scale(1.1);
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-.now-playing .random-icon {
-    animation: surprisePop 0.6s ease-out;
-}
-
-/* Responsive para nuevos elementos */
-@media (max-width: 768px) {
     .random-indicator {
         font-size: 0.8rem;
         padding: 8px;
     }
 
-    .playlist-actions {
-        gap: 5px;
-    }
-
-    .action-btn {
-        width: 30px;
-        height: 30px;
+    .play-mode-info {
         font-size: 0.8rem;
+        padding: 6px 10px;
     }
 
-    .random-btn:hover::after {
+    .playlist-stats {
+        font-size: 0.7rem;
+    }
+
+    .song-number {
+        width: 20px;
+        height: 20px;
+        font-size: 0.7rem;
+        margin-right: 8px;
+    }
+
+    .playlist-footer {
+        font-size: 0.7rem;
+        padding: 10px 15px;
+    }
+
+    .mode-btn:hover::after {
         display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-container {
+        height: 350px;
+    }
+
+    .slide-content {
+        padding: 15px 20px;
+        max-width: 90%;
+    }
+
+    .slide-content h3 {
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+    }
+
+    .slide-content p {
+        font-size: 0.9rem;
+    }
+
+    .carousel-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
     }
 }
