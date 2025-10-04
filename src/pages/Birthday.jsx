@@ -618,6 +618,8 @@
 // export default BirthdayInvitation;
 
 import { useState, useEffect, useMemo, useRef } from 'react';
+import { QRCodeSVG } from 'qrcode.react';
+import MyIcon from '../assets/maq.svg'
 import './Birthday.css';
 
 // Importa tu imagen
@@ -629,7 +631,7 @@ import foto2 from '../assets/carrusel/foto2.jpg';
 import foto3 from '../assets/carrusel/foto3.jpg';
 import foto4 from '../assets/carrusel/foto4.jpg';
 import foto5 from '../assets/carrusel/foto5.jpg';
-import foto6 from '../assets/carrusel/foto5.jpg';
+import foto6 from '../assets/carrusel/foto6.jpg';
 
 // Importa la lista de temas
 import deMuscaLigera from '../assets/deMusicaLigera.mp3'
@@ -710,28 +712,33 @@ const getRandomSong = () => {
 const carouselData = [
     {
         image: foto1,
-        title: "Los Redondos",
-        description: "El sonido under que se convirtió en leyenda"
+        title: "El porte de un prócer",
+        description: "y la humildad de un trabajador"
     },
     {
         image: foto2,
-        title: "Soda Stereo",
-        description: "Cerati, el genio que cambió el rock en español"
+        title: "En estado salvaje",
+        description: "hinchado las pelotas"
     },
     {
         image: foto3,
-        title: "Divididos",
-        description: "La triple potency del rock argentino"
+        title: "Sospechando de las intenciones",
+        description: "las tuyas, las mías, las de Jesús que está ahí"
     },
     {
         image: foto4,
-        title: "Los Enanitos Verdes",
-        description: "El sonido mendocino que conquistó América"
+        title: "bebé",
+        description: "bebé menos la próxima"
     },
     {
         image: foto5,
-        title: "Heroes del Silencio",
-        description: "Aunque españoles, honores del rock en español"
+        title: "terminando la fiesta",
+        description: "listo para la que sigue"
+    },
+    {
+        image: foto6,
+        title: "¿por qué tan formal?",
+        description: "hoy alcanzó para el fernet"
     }
 ];
 
@@ -761,11 +768,12 @@ const Birthday = () => {
 
     // Timeline/Itinerario
     const timelineData = [
-        { time: "21:00 - 22:00", event: "Llegada y bienvenida con temas de Los Redondos" },
-        { time: "22:00 - 23:00", event: "Tributo a Soda Stereo - Noche de karaoke rockero" },
-        { time: "23:00 - 00:00", event: "Asado y fernet con sonido de Divididos" },
-        { time: "00:00 - 01:00", event: "Sorpresa rockera y pastel de cumpleaños" },
-        { time: "01:00 - Hasta que aguante", event: "Baile con los hits del rock nacional de los 90" }
+        { time: "21:00 - 22:00", event: "Llegada y bienvenida rockandrolera" },
+        { time: "22:00 - 23:00", event: "Arranca la masticación: empanaditas y parrillada (el que llega tarde no come)" },
+        { time: "23:00 - 23:40", event: "Arranca el folclore (se baila o se baila) con Los Orejanos" },
+        { time: "23:40 - 00:00", event: "Entrada oficial del cumpleañero y momento sorpresa" },
+        { time: "00:00 - 01:00", event: "Música fiestera y salsera (banda a confirmar)" },
+        { time: "01:00 - 04:30", event: "Rock, cumbia, cuarteto, cachengue y cachengue... ¿alguien pudió cachengue?" }
     ];
 
     // Control de música
@@ -1147,7 +1155,7 @@ const Birthday = () => {
                         <h2 className="section-title">
                             <i className="far fa-clock"></i> CUENTA REGRESIVA
                         </h2>
-                        <p>El recital comienza en:</p>
+                        <p>El festejo comienza en:</p>
                         <div className="countdown">
                             <div className="countdown-item">
                                 <span className="countdown-number">
@@ -1181,12 +1189,36 @@ const Birthday = () => {
                         <h2 className="section-title">
                             <i className="fas fa-map-marker-alt"></i> UBICACIÓN
                         </h2>
-                        <p>El recital será en: <strong>Estadio Obras Sanitarias, Av. del Libertador 7395</strong></p>
+                        <p>Te espero en: <strong>La Isla Parrillada - El Cadillal</strong></p>
                         <div className="map-container">
-                            <div className="map-placeholder">
-                                <i className="fas fa-map"></i>
-                                <p>Mapa del rock argentino</p>
-                                <p><small>Obras, el templo del rock nacional</small></p>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3566.73381075251!2d-65.2026769!3d-26.6249778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9422654b49d21d91%3A0xd87e4d9995391917!2sResto%20Bar%20LA%20ISLA%20(Cadillal)!5e0!3m2!1ses-419!2sar!4v1759530896493!5m2!1ses-419!2sar"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0, borderRadius: '5px' }}
+                                allowFullScreen=""
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                title="Ubicación del Estadio Obras Sanitarias"
+                            ></iframe>
+                        </div>
+                        <div className="location-info">
+                            <div className="location-details">
+                                <i className="fas fa-map-pin"></i>
+                                <div>
+                                    <strong>La Isla Parrillada</strong>
+                                    <p>El Cadilla - Frente al Dique</p>
+                                </div>
+                            </div>
+                            <div className="transport-info">
+                                <div className="transport-item">
+                                    <i className="fas fa-subway"></i>
+                                    <span>Línea D - Estación Plaza Italia</span>
+                                </div>
+                                <div className="transport-item">
+                                    <i className="fas fa-bus"></i>
+                                    <span>Colectivos: 10, 37, 59, 60, 67, 93, 95, 110, 118</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1194,7 +1226,7 @@ const Birthday = () => {
                     {/* Galería de fotos - Carrusel */}
                     <div className="section">
                         <h2 className="section-title">
-                            <i className="far fa-images"></i> MOMENTOS ROCKEROS
+                            <i className="far fa-images"></i>El cumpleañero tiene tantos estilos (es como Pedro Pascal)
                         </h2>
                         <div className="photo-carousel">
                             <div
@@ -1239,25 +1271,176 @@ const Birthday = () => {
                         </div>
                     </div>
 
-                    {/* QR para donaciones */}
+                    {/* Sección CVU Ualá */}
                     <div className="section">
                         <h2 className="section-title">
-                            <i className="fas fa-beer"></i> BONDI DEL ROCK
+                            <i className="fas fa-wallet"></i> ¿Cómo podes colaborar?
                         </h2>
-                        <div className="qr-section">
-                            <div className="qr-code">
-                                <i className="fas fa-qrcode"></i>
+                        <div className="cvu-section">
+                            <div className="cvu-info-card">
+                                <div className="cvu-header">
+                                    <div className="uala-logo">
+                                        <i className="fas fa-mobile-alt"></i>
+                                        <span>Ualá</span>
+                                    </div>
+                                    <div className="cvu-type">transferencia</div>
+                                </div>
+
+                                <div className="cvu-number-container">
+                                    <div className="cvu-label">Número de CVU</div>
+                                    <div className="cvu-number" id="cvuNumber">
+                                        3840200500000030758762
+                                    </div>
+                                    <button
+                                        className="copy-btn"
+                                        onClick={() => {
+                                            navigator.clipboard.writeText('3840200500000030758762');
+                                            // Efecto visual de copiado
+                                            const btn = document.querySelector('.copy-btn');
+                                            btn.innerHTML = '<i class="fas fa-check"></i> Copiado!';
+                                            setTimeout(() => {
+                                                btn.innerHTML = '<i class="fas fa-copy"></i> Copiar CVU';
+                                            }, 2000);
+                                        }}
+                                    >
+                                        <i className="fas fa-copy"></i> Copiar CVU
+                                    </button>
+                                </div>
+
+                                <div className="account-info">
+                                    <div className="info-item">
+                                        <i className="fas fa-user"></i>
+                                        <div>
+                                            <span className="info-label">Titular</span>
+                                            <span className="info-value">Miguel Ángel Quinteros</span>
+                                        </div>
+                                    </div>
+                                    <div className="info-item">
+                                        <i className="fas fa-tag"></i>
+                                        <div>
+                                            <span className="info-label">Concepto</span>
+                                            <span className="info-value">Mis 15+25</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <p className="donation-text">
-                                ¿Quieres ayudar con el bondi? Escanea este código con tu celu y colaborá con la birra y el fernet. ¡Todo suma para la joda!
-                            </p>
+
+                            <div className="qr-container">
+                                <div className="qr-code-cvu">
+                                    <QRCodeSVG
+                                        value="3840200500000030758762"
+                                        size={200}
+                                        bgColor="#F5F5F5"
+                                        fgColor="#8B0000"
+                                        level="H"
+                                        includeMargin={true}
+                                    />
+                                    <div className="qr-overlay">
+                                        {/* <i className="fab fa-ualá"></i> */}
+                                        <img src={MyIcon} alt="Your SVG" />
+                                    </div>
+                                </div>
+                                <div className="qr-instructions">
+                                    <h3>¿Cómo transferir?</h3>
+                                    <div className="steps">
+                                        <div className="step">
+                                            <span className="step-number">1</span>
+                                            <span className="step-text">Abrí Ualá</span>
+                                        </div>
+                                        <div className="step">
+                                            <span className="step-number">2</span>
+                                            <span className="step-text">Escaneá el QR o pegá el CVU</span>
+                                        </div>
+                                        <div className="step">
+                                            <span className="step-number">3</span>
+                                            <span className="step-text">Ingresá el monto y enviá</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* <div className="donation-options">
+                                <h3>Monto sugerido</h3>
+                                <div className="amount-buttons">
+                                    <button
+                                        className="amount-btn"
+                                        onClick={() => navigator.clipboard.writeText('0000003100000000000000')}
+                                    >
+                                        $2.000
+                                    </button>
+                                    <button
+                                        className="amount-btn"
+                                        onClick={() => navigator.clipboard.writeText('0000003100000000000000')}
+                                    >
+                                        $5.000
+                                    </button>
+                                    <button
+                                        className="amount-btn active"
+                                        onClick={() => navigator.clipboard.writeText('0000003100000000000000')}
+                                    >
+                                        $10.000
+                                    </button>
+                                    <button
+                                        className="amount-btn"
+                                        onClick={() => navigator.clipboard.writeText('0000003100000000000000')}
+                                    >
+                                        Otro
+                                    </button>
+                                </div>
+
+                                <div className="quick-actions">
+                                    <button
+                                        className="action-btn primary"
+                                        onClick={() => window.open('uala://transfer', '_blank')}
+                                    >
+                                        <i className="fas fa-external-link-alt"></i>
+                                        Abrir Ualá Directo
+                                    </button>
+                                    <button
+                                        className="action-btn secondary"
+                                        onClick={() => {
+                                            navigator.clipboard.writeText('0000003100000000000000');
+                                            alert('CVU copiado al portapapeles');
+                                        }}
+                                    >
+                                        <i className="fas fa-share-alt"></i>
+                                        Compartir CVU
+                                    </button>
+                                </div>
+                            </div> */}
+                        </div>
+
+                        <div className="transfer-info">
+                            <div className="info-box">
+                                <i className="fas fa-bolt"></i>
+                                <div>
+                                    <h4>Transferencia Instantánea</h4>
+                                    <p>El dinero llega en segundos, disponible 24/7</p>
+                                </div>
+                            </div>
+                            <div className="info-box">
+                                <i className="fas fa-shield-alt"></i>
+                                <div>
+                                    <h4>100% Seguro</h4>
+                                    <p>Operación protegida por Ualá</p>
+                                </div>
+                            </div>
+                            <div className="info-box">
+                                <i className="fas fa-beer"></i>
+                                <div>
+                                    <h4>Para la joda</h4>
+                                    <p>Todo va directo a la birra y el fernet</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+
 
                     {/* Itinerario */}
                     <div className="section">
                         <h2 className="section-title">
-                            <i className="far fa-calendar-alt"></i> SETLIST DE LA NOCHE
+                            <i className="far fa-calendar-alt"></i>¿Qué vamos a hacer esa noche?
                         </h2>
                         <div className="timeline">
                             {timelineData.map((item, index) => (
