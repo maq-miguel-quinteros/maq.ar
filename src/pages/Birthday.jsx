@@ -540,7 +540,7 @@ const Birthday = () => {
                         <h2 className="section-title">
                             <i className="far fa-clock"></i> CUENTA REGRESIVA
                         </h2>
-                        <p>El festejo comienza en:</p>
+                        <p>Nos vemos el <strong>sábado 22 de noviembre a las 21 hs.</strong> El festejo comienza en:</p>
                         <div className="countdown">
                             <div className="countdown-item">
                                 <span className="countdown-number">
@@ -780,7 +780,7 @@ const Birthday = () => {
 
                 {/* Footer */}
                 <div className="footer">
-                    <p>¡No faltes a la fiesta! Confirmá tu lugar antes del 10 de Diciembre</p>
+                    <p>¡No faltes a la fiesta! Confirmá tu lugar antes del 10 de noviembre</p>
                     <p>Contacto: 381 15 5355225</p>
                     <div className="rock-quote">Hoy celebramos, mañana, quién sabe</div>
                 </div>
