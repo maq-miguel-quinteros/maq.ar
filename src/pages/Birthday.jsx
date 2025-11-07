@@ -151,7 +151,7 @@ const Birthday = () => {
     const timelineData = [
         { time: "21:00 - 22:00", event: "Llegada y bienvenida rockandrolera" },
         { time: "22:00 - 23:00", event: "Masticación time: empanaditas y parrillada (el que llega tarde no come)" },
-        { time: "23:00 - 23:40", event: "Arranca el folcklore (se baila o se baila) con ", name:'Los Orejanos', contact:'https://www.instagram.com/losorejanos15/' },
+        { time: "23:00 - 23:40", event: "Arranca el folcklore (se baila o se baila) con ", name:'David Robles', contact:'https://www.instagram.com/davidrobles.oficial/' },
         { time: "23:40 - 00:00", event: "Entrada oficial del cumpleañero y momento sorpresa" },
         { time: "00:00 - 01:00", event: "Música fiestera y salsera con ", name:'Tumbao de Caña', contact: 'https://www.instagram.com/tumbao_de_cana_oficial/' },
         { time: "01:00 - 01:15", event: "Suplado de 40 cervevelas"},
