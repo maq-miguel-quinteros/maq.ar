@@ -139,7 +139,7 @@ const Birthday = () => {
     const playlistRef = useRef(null);
 
     // Fecha de la fiesta
-    const partyDate = useMemo(() => new Date(2025, 10, 23, 21, 0, 0).getTime(), []);
+    const partyDate = useMemo(() => new Date(2025, 10, 22, 21, 0, 0).getTime(), []);
 
     // Inicializar canción aleatoria
     useEffect(() => {
