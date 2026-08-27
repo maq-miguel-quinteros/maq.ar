@@ -15,166 +15,150 @@
   overflow: hidden;
 }
 
-/* Ilustraciones decorativas de fondo (hojas tropicales y sol) */
-.container::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  width: 120px;
-  height: 120px;
-  background: radial-gradient(circle, #ffb74d 20%, transparent 70%);
-  opacity: 0.6;
-  z-index: 0;
-  pointer-events: none;
-}
 
-/* Insignia festiva */
+/* Insignia superior tropical */
 .badge {
-  position: relative;
-  z-index: 1;
-  background: linear-gradient(135deg, #ff6f00, #ff3d00);
-  color: #ffffff;
-  font-size: 0.9rem;
+  background: linear-gradient(135deg, #e0f2f1, #b2dfdb);
+  color: #004d40;
+  font-size: 0.85rem;
   font-weight: 800;
-  letter-spacing: 2px;
-  padding: 0.5rem 1.5rem;
-  border-radius: 50px;
   text-transform: uppercase;
-  box-shadow: 0 4px 15px rgba(255, 61, 0, 0.4);
-  margin-bottom: 1.5rem;
-  border: 2px solid #ffe0b2;
+  letter-spacing: 1.5px;
+  padding: 0.4rem 1.1rem;
+  border-radius: 50px;
+  border: 1px solid #80cbc4;
+  box-shadow: 0 4px 12px rgba(0, 137, 123, 0.15);
+  margin-bottom: 1.2rem;
 }
 
-/* Marco de foto con dorado solar y guirnalda tropical */
+/* Contenedor de la foto de perfil */
 .imageContainer {
   position: relative;
-  z-index: 1;
-  margin-bottom: 1.25rem;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 0.8rem;
 }
 
 .imageRing {
-  width: 170px;
-  height: 170px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
-  padding: 6px;
-  background: linear-gradient(135deg, #ffb300, #ff3d00, #00acc1);
-  box-shadow: 0 12px 28px rgba(230, 81, 0, 0.3);
+  padding: 4px;
+  /* Gradiente entre verde esmeralda y azul oceánico */
+  background: linear-gradient(135deg, #00897b, #0288d1);
+  box-shadow: 0 8px 22px rgba(0, 77, 64, 0.25);
+  box-sizing: border-box;
 }
 
 .profileImage {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #ffffff;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  box-sizing: border-box;
 }
 
-.musicNoteLeft,
-.musicNoteRight {
+/* Notas musicales flotantes */
+.musicNoteLeft, .musicNoteRight {
   position: absolute;
-  font-size: 1.8rem;
-  z-index: 2;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
-  animation: floatNote 2.5s ease-in-out infinite alternate;
+  font-size: 1.4rem;
+  background: #ffffff;
+  border: 1px solid #b2dfdb;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 77, 64, 0.15);
 }
 
 .musicNoteLeft {
-  top: 5px;
-  left: -20px;
+  top: 10px;
+  left: -8px;
+  transform: rotate(-12deg);
 }
 
 .musicNoteRight {
-  bottom: 5px;
-  right: -20px;
-  animation-delay: 1.2s;
+  bottom: 10px;
+  right: -8px;
+  transform: rotate(12deg);
 }
 
-@keyframes floatNote {
-  0% { transform: translateY(0) rotate(-12deg) scale(1); }
-  100% { transform: translateY(-10px) rotate(12deg) scale(1.1); }
-}
-
-/* Tipografía de título con color caribeño impactante */
+/* Nombre principal de Héctor */
 .title {
-  position: relative;
-  z-index: 1;
-  font-size: 3.2rem;
+  font-size: 2.6rem;
   font-weight: 900;
-  margin: 0;
-  letter-spacing: 1px;
+  margin: 0.2rem 0 0 0;
+  line-height: 1;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  background: linear-gradient(135deg, #bf360c, #ff6f00, #d81b60);
+  background: linear-gradient(135deg, #004d40 0%, #0288d1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 2px 4px rgba(255, 111, 0, 0.2));
 }
 
+/* Eslogan debajo del nombre */
 .slogan {
-  position: relative;
-  z-index: 1;
-  font-size: 1.15rem;
-  color: #00838f;
-  font-weight: 800;
-  margin: 0.25rem 0 1.5rem 0;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #00695c;
+  margin: 0.3rem 0 1.25rem 0;
+  letter-spacing: 1px;
 }
 
-/* Tarjeta central legible con borde cálido y fondo limpio */
+/* Tarjeta contenedora del mensaje */
 .cardInfo {
-  position: relative;
-  z-index: 1;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
-  border-radius: 22px;
-  padding: 1.75rem 1.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  border: 2px solid #ffe0b2;
-  border-top: 5px solid #ff6f00;
+  border-radius: 20px;
+  padding: 1.25rem 1.25rem 1rem 1.25rem;
+  box-shadow: 0 10px 28px rgba(0, 77, 64, 0.12);
+  border: 2px solid #b2dfdb;
+  border-top: 4px solid #00897b;
   width: 100%;
   box-sizing: border-box;
 }
 
 .invitationText {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #263238;
-  margin: 0 0 1.25rem 0;
+  font-size: 0.95rem;
+  color: #004d40;
+  line-height: 1.55;
   font-weight: 500;
+  margin: 0 0 1rem 0;
 }
 
+/* Barra inferior de íconos */
 .iconBar {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
-  font-size: 1.6rem;
-  padding-top: 1rem;
-  border-top: 2px dashed #ffe0b2;
+  gap: 1.2rem;
+  font-size: 1.3rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed #b2dfdb;
 }
 
-/* Responsivo para móviles */
+/* Adaptación para dispositivos móviles */
 @media (max-width: 480px) {
-  .container {
-    padding: 2rem 1rem 1.25rem 1rem;
-    border-radius: 20px;
-  }
-
-  .imageRing {
-    width: 140px;
-    height: 140px;
+  .imageContainer {
+    width: 200px;
+    height: 200px;
   }
 
   .title {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
   }
 
   .slogan {
-    font-size: 0.95rem;
-    letter-spacing: 2px;
+    font-size: 0.88rem;
   }
 
   .invitationText {
-    font-size: 1rem;
+    font-size: 0.88rem;
+  }
+
+  .cardInfo {
+    padding: 1rem 0.9rem 0.85rem 0.9rem;
   }
 }

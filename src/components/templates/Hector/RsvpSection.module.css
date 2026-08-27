@@ -11,9 +11,9 @@
   backdrop-filter: blur(8px);
   border-radius: 22px;
   padding: 1.75rem 1.5rem;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-  border: 2px solid #ffe0b2;
-  border-top: 5px solid #25d366;
+  box-shadow: 0 12px 30px rgba(0, 77, 64, 0.15);
+  border: 2px solid #b2dfdb;
+  border-top: 5px solid #00897b;
   text-align: center;
 }
 
@@ -25,7 +25,7 @@
 .title {
   font-size: 1.6rem;
   font-weight: 800;
-  color: #bf360c;
+  color: #004d40;
   margin: 0 0 0.4rem 0;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -34,14 +34,14 @@
 .divider {
   width: 45px;
   height: 3px;
-  background: linear-gradient(90deg, #25d366, #ff6f00);
+  background: linear-gradient(90deg, #00897b, #0288d1);
   margin: 0 auto 1.25rem auto;
   border-radius: 2px;
 }
 
 .description {
   font-size: 0.95rem;
-  color: #37474f;
+  color: #004d40;
   line-height: 1.5;
   margin: 0 0 1.5rem 0;
 }
@@ -62,7 +62,7 @@
 .label {
   font-size: 0.85rem;
   font-weight: 700;
-  color: #00838f;
+  color: #00695c;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -71,18 +71,18 @@
   width: 100%;
   padding: 0.75rem 1rem;
   border-radius: 12px;
-  border: 1px solid #ffcc80;
-  background: #fff8f0;
+  border: 1px solid #b2dfdb;
+  background: #f0fdf4;
   font-size: 0.95rem;
-  color: #263238;
+  color: #004d40;
   box-sizing: border-box;
   outline: none;
   transition: border-color 0.2s ease;
 }
 
 .input:focus {
-  border-color: #ff6f00;
-  box-shadow: 0 0 0 3px rgba(255, 111, 0, 0.15);
+  border-color: #0288d1;
+  box-shadow: 0 0 0 3px rgba(2, 136, 209, 0.15);
 }
 
 .radioGroup {
@@ -98,11 +98,11 @@
   gap: 0.4rem;
   padding: 0.75rem 0.5rem;
   border-radius: 12px;
-  border: 1px solid #ffcc80;
-  background: #fff8f0;
+  border: 1px solid #b2dfdb;
+  background: #f0fdf4;
   font-size: 0.88rem;
   font-weight: 600;
-  color: #37474f;
+  color: #004d40;
   cursor: pointer;
   transition: all 0.25s ease;
 }
@@ -112,15 +112,15 @@
 }
 
 .radioOption.active {
-  background: #e8f5e9;
-  border-color: #25d366;
-  color: #1b5e20;
-  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.2);
+  background: #e0f2f1;
+  border-color: #00897b;
+  color: #004d40;
+  box-shadow: 0 2px 8px rgba(0, 137, 123, 0.2);
 }
 
 .whatsappButton {
   margin-top: 0.5rem;
-  background: linear-gradient(135deg, #25d366, #128c7e);
+  background: linear-gradient(135deg, #00897b, #0288d1);
   color: #ffffff;
   border: none;
   font-weight: 800;
@@ -128,7 +128,7 @@
   padding: 0.9rem 1.2rem;
   border-radius: 50px;
   cursor: pointer;
-  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+  box-shadow: 0 6px 18px rgba(2, 136, 209, 0.35);
   transition: all 0.25s ease;
   display: flex;
   align-items: center;
@@ -138,10 +138,9 @@
 
 .whatsappButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(37, 211, 102, 0.45);
+  box-shadow: 0 8px 22px rgba(2, 136, 209, 0.45);
 }
 
-/* Adaptatabilidad móvil */
 @media (max-width: 480px) {
   .radioGroup {
     flex-direction: column;

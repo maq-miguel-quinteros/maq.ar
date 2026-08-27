@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import styles from './RsvpSection.module.css';
 
 export const RsvpSection = ({ 
-  phoneNumber = "5493881234567" // Reemplazar con el número de WhatsApp (con código de país sin + ni espacios)
+  phoneNumber = "5493881234567" // Número de WhatsApp (con código de país sin + ni espacios)
 }) => {
   const [guestName, setGuestName] = useState('');
-  const [attendance, setAttendance] = useState('yes'); // 'yes' | 'no'
+  const [attendance, setAttendance] = useState('yes');
   const [dietary, setDietary] = useState('');
 
   const handleSendWhatsApp = (e) => {
@@ -14,13 +14,13 @@ export const RsvpSection = ({
 
     let message = '';
     if (attendance === 'yes') {
-      message = `¡Hola Héctor! 👋 Confirmó mi asistencia a tus 60 Años 🎉.\n\n👤 *Nombre:* ${guestName.trim()}`;
+      message = `¡Hola! 👋 Confirmo mi asistencia a los 60 Años de Héctor 🎉.\n\n👤 *Nombre:* ${guestName.trim()}`;
       if (dietary.trim()) {
         message += `\n🥗 *Preferencia/Restricción alimentaria:* ${dietary.trim()}`;
       }
-      message += `\n\n¡Listo para bailar salsa! 💃🕺`;
+      message += `\n\n¡Listo para la fiesta! 🕺💃`;
     } else {
-      message = `¡Hola Héctor! 👋 Soy ${guestName.trim()}. Lamentablemente no podré acompañarte en tus 60 Años, pero te deseo el mejor de los cumpleaños. ¡Un abrazo grande! 🎉`;
+      message = `¡Hola! 👋 Soy ${guestName.trim()}. Lamentablemente no podré ir a los 60 Años de Héctor, pero le envío un abrazo enorme. 🎉`;
     }
 
     const encodedMessage = encodeURIComponent(message);
@@ -91,7 +91,7 @@ export const RsvpSection = ({
               <input
                 id="dietary"
                 type="text"
-                placeholder="Ej: Celíaco, Vegetariano, Vegano, etc."
+                placeholder="Ej: Celíaco, Vegetariano, Vegano"
                 value={dietary}
                 onChange={(e) => setDietary(e.target.value)}
                 className={styles.input}

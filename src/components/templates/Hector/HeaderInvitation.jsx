@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './HeaderInvitation.module.css';
+import profile from '../../../assets/hector/profile.png'
 
 export const HeaderInvitation = ({ 
   name = "Héctor", 
-  age = 60, 
-  photoUrl = "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80", 
+  age = 60,
   message = "Te invito a celebrar junto a mí este momento tan especial. ¡Vení a compartir una jornada a pura salsa, sol, pileta y mucho sabor!" 
 }) => {
   return (
@@ -17,7 +17,7 @@ export const HeaderInvitation = ({
       {/* Marco de foto con acentos solares/cálidos */}
       <div className={styles.imageContainer}>
         <div className={styles.imageRing}>
-          <img src={photoUrl} alt={`Foto de ${name}`} className={styles.profileImage} />
+          <img src={profile} alt={`Foto de ${name}`} className={styles.profileImage} />
         </div>
         <span className={styles.musicNoteLeft}>🎶</span>
         <span className={styles.musicNoteRight}>🎺</span>
