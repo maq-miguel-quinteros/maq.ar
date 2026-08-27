@@ -1,13 +1,21 @@
 import React from 'react';
+import { HeaderInvitation } from '../components/templates/Hector/HeaderInvitation';
+import { PhotoCarousel } from '../components/templates/Hector/PhotoCarousel';
+import styles from './Hector60.module.css';
 
- function Hector60() {
+function Hector60() {
+  return (
+    <div className={styles.mainBackground}>
+      {/* Capa de ajuste de contraste para el fondo */}
+      <div className={styles.overlay}></div>
 
-
-    return (
-        <div>            
-            <h1>Aqui va la web de hector proximamente</h1>
-        </div>
-    )
+      {/* Flujo directo de componentes */}
+      <div className={styles.contentDirect}>
+        <HeaderInvitation />
+        <PhotoCarousel />
+      </div>
+    </div>
+  );
 }
 
-export default Hector60
+export default Hector60;
