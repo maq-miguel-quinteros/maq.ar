@@ -2,20 +2,20 @@ import { BiCurrentLocation, BiEnvelope, BiLogoBlogger, BiMoon, BiPhone, BiSun, B
 import { SiWattpad } from "react-icons/si"
 import ArtisticBookItem from '../atoms/ArtiscticBookItem'
 import image from '../../assets/profile.png'
-import ArtisticAsideCard from '../atoms/ArtisticAsideCard'
+import ArtisticAsideCard from '../atoms/ArtisticAsideCard_book03'
 import ArtisticLiDot from '../atoms/ArtisticLiDot'
 import ArtisticMenu from '../atoms/ArtisticMenu'
-import ArtisticMenuItem from '../atoms/ArtisticMenuItem'
+import ArtisticMenuItem from '../atoms/ArtisticMenuItem_book03'
 
 // eslint-disable-next-line react/prop-types
-export default function ArtisticLeft({ darkMode, toggleDarkMode }) {
+export default function ArtisticLeft_book03({ darkMode, toggleDarkMode }) {
 
     return (
         <div className="
         min-h-screen flex-1 relative p-10 transition-all duration-500
         sm:border-r
-        bg-yellow-50 text-yellow-950 border-yellow-700
-        dark:bg-yellow-950 dark:text-yellow-50 dark:border-yellow-700">
+        bg-sky-50 text-sky-950 border-sky-700
+        dark:bg-sky-950 dark:text-sky-50 dark:border-sky-700">
 
             <div className="flex flex-col gap-5">
                 <div className="flex flex-col items-center justify-center gap-5">
@@ -40,8 +40,8 @@ export default function ArtisticLeft({ darkMode, toggleDarkMode }) {
                             />
                             <ArtisticMenuItem
                                 name='artístico'
-                                path={'artistico'}
-                                isActive={false}
+                                path={'/artistico'}
+                                isActive={true}
                             />
                         </div>
                     </div>
@@ -68,7 +68,7 @@ export default function ArtisticLeft({ darkMode, toggleDarkMode }) {
                     <ul className='space-y-5'>
                         <li>
                             <div className='flex items-center gap-2'>
-                                <BiSolidBook className='text-2xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-2xl text-sky-900' />
+                                <BiSolidBook className='text-2xl text-sky-900' />
                                 <ArtisticBookItem
                                     isActive={true}
                                     path='/artistico/libros/03'>
@@ -80,7 +80,7 @@ export default function ArtisticLeft({ darkMode, toggleDarkMode }) {
                         </li>
                         <li >
                             <div className='flex items-center gap-2'>
-                                <BiSolidBook className='text-2xl text-slate-900 dark:text-slate-900' />
+                                <BiSolidBook className='text-4xl text-slate-900 dark:text-slate-900' />
                                 <ArtisticBookItem
                                     isActive={false}
                                     path='/artistic/libros/02'>
@@ -95,10 +95,10 @@ export default function ArtisticLeft({ darkMode, toggleDarkMode }) {
                             <div className='flex items-center gap-2'>
                                 <BiSolidBook className='text-4xl dark:text-green-900 text-green-900' />
                                 <ArtisticBookItem
-                                isActive={false}
-                                path='/artistico/libros/01'>
+                                    isActive={false}
+                                    path='/artistico/libros/01'>
                                     <span className='dark:hover:bg-green-700 hover:bg-green-700 hover:text-yellow-50'>
-                                    Ernesto Pérez Pascualino y sus Cuentos de Ciencia-Ficción Popular
+                                        Ernesto Pérez Pascualino y sus Cuentos de Ciencia-Ficción Popular
                                     </span>
                                 </ArtisticBookItem>
                             </div>
@@ -125,11 +125,11 @@ export default function ArtisticLeft({ darkMode, toggleDarkMode }) {
                     </ul>
                 </ArtisticAsideCard>
 
-                <ArtisticAsideCard title='TALLERES'>
+                {/* <ArtisticAsideCard title='PUBLICACIONES'>
                     <ul>
                         <ArtisticLiDot
-                            field='Guion Cinematográfico'
-                            place='Nicolás Rapisarda'
+                            field='La casa de los espejos'
+                            place='Divino Desorden Ediciones'
                             year='2025'
                         />
                         <ArtisticLiDot
@@ -153,7 +153,7 @@ export default function ArtisticLeft({ darkMode, toggleDarkMode }) {
                             year='2021'
                         />
                     </ul>
-                </ArtisticAsideCard>
+                </ArtisticAsideCard> */}
                 {/**
                 <ArtisticAsideCard title='HABILIDADES'>
                     <div className='flex flex-wrap gap-3'>
