@@ -1,0 +1,109 @@
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 1.5rem auto;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  border-radius: 22px;
+  padding: 1.75rem 1.25rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  border: 2px solid #ffe0b2;
+  border-top: 5px solid #ff6f00;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #bf360c;
+  margin: 0 0 0.4rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.divider {
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6f00, #ff3d00);
+  margin: 0 auto 1.25rem auto;
+  border-radius: 2px;
+}
+
+.timerGrid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.timeBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+  padding: 0.75rem 0.6rem;
+  border-radius: 14px;
+  min-width: 65px;
+  border: 1px solid #ffcc80;
+  box-shadow: 0 4px 10px rgba(255, 111, 0, 0.1);
+}
+
+.number {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #d81b60;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #00838f;
+  text-transform: uppercase;
+  margin-top: 0.3rem;
+  letter-spacing: 0.5px;
+}
+
+.colon {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #ff6f00;
+  margin-bottom: 1rem;
+}
+
+.finishedMessage {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ff3d00;
+  padding: 1rem;
+}
+
+/* Adaptación responsive para pantallas de teléfono */
+@media (max-width: 480px) {
+  .timeBox {
+    min-width: 52px;
+    padding: 0.6rem 0.4rem;
+  }
+
+  .number {
+    font-size: 1.4rem;
+  }
+
+  .label {
+    font-size: 0.65rem;
+  }
+
+  .colon {
+    font-size: 1.2rem;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+}

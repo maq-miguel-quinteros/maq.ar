@@ -1,0 +1,109 @@
+import React, { useState } from 'react';
+import styles from './RsvpSection.module.css';
+
+export const RsvpSection = ({ 
+  phoneNumber = "5493881234567" // Reemplazar con el número de WhatsApp (con código de país sin + ni espacios)
+}) => {
+  const [guestName, setGuestName] = useState('');
+  const [attendance, setAttendance] = useState('yes'); // 'yes' | 'no'
+  const [dietary, setDietary] = useState('');
+
+  const handleSendWhatsApp = (e) => {
+    e.preventDefault();
+    if (!guestName.trim()) return;
+
+    let message = '';
+    if (attendance === 'yes') {
+      message = `¡Hola Héctor! 👋 Confirmó mi asistencia a tus 60 Años 🎉.\n\n👤 *Nombre:* ${guestName.trim()}`;
+      if (dietary.trim()) {
+        message += `\n🥗 *Preferencia/Restricción alimentaria:* ${dietary.trim()}`;
+      }
+      message += `\n\n¡Listo para bailar salsa! 💃🕺`;
+    } else {
+      message = `¡Hola Héctor! 👋 Soy ${guestName.trim()}. Lamentablemente no podré acompañarte en tus 60 Años, pero te deseo el mejor de los cumpleaños. ¡Un abrazo grande! 🎉`;
+    }
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+    window.open(whatsappUrl, '_blank');
+  };
+
+  return (
+    <section className={styles.container}>
+      <div className={styles.card}>
+        <div className={styles.iconHeader}>📩</div>
+        <h2 className={styles.title}>Confirmar Asistencia</h2>
+        <div className={styles.divider}></div>
+
+        <p className={styles.description}>
+          Por favor, confirmá tu presencia para organizar mejor la comida y el espacio.
+        </p>
+
+        <form onSubmit={handleSendWhatsApp} className={styles.form}>
+          <div className={styles.inputGroup}>
+            <label htmlFor="guestName" className={styles.label}>
+              Nombre y Apellido del / de los asistentes:
+            </label>
+            <input
+              id="guestName"
+              type="text"
+              placeholder="Ej: María y Carlos Gómez"
+              value={guestName}
+              onChange={(e) => setGuestName(e.target.value)}
+              className={styles.input}
+              required
+            />
+          </div>
+
+          <div className={styles.inputGroup}>
+            <label className={styles.label}>¿Vas a asistir?</label>
+            <div className={styles.radioGroup}>
+              <label className={`${styles.radioOption} ${attendance === 'yes' ? styles.active : ''}`}>
+                <input
+                  type="radio"
+                  name="attendance"
+                  value="yes"
+                  checked={attendance === 'yes'}
+                  onChange={() => setAttendance('yes')}
+                />
+                🎉 ¡Sí, ahí estaré!
+              </label>
+
+              <label className={`${styles.radioOption} ${attendance === 'no' ? styles.active : ''}`}>
+                <input
+                  type="radio"
+                  name="attendance"
+                  value="no"
+                  checked={attendance === 'no'}
+                  onChange={() => setAttendance('no')}
+                />
+                😔 No podré ir
+              </label>
+            </div>
+          </div>
+
+          {attendance === 'yes' && (
+            <div className={styles.inputGroup}>
+              <label htmlFor="dietary" className={styles.label}>
+                Restricción alimentaria / Menú especial (opcional):
+              </label>
+              <input
+                id="dietary"
+                type="text"
+                placeholder="Ej: Celíaco, Vegetariano, Vegano, etc."
+                value={dietary}
+                onChange={(e) => setDietary(e.target.value)}
+                className={styles.input}
+              />
+            </div>
+          )}
+
+          <button type="submit" className={styles.whatsappButton}>
+            💬 Confirmar por WhatsApp
+          </button>
+        </form>
+      </div>
+    </section>
+  );
+};
