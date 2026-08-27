@@ -12,7 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Technological/>} />
           <Route path="/artistico" element={<Artistic />}/>
-          <Route path="/artistico/libros/03" element={<Artistic />}/>´
+          <Route path="/artistico/libros/03" element={<Artistic />}/>
           <Route path="/hector60" element={<Hector60 />}/>
         </Routes>
       </Router>
