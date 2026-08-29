@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import styles from './RsvpSection.module.css';
 
 export const RsvpSection = ({ 
-  phoneNumber = "5493881234567" // Número de WhatsApp (con código de país sin + ni espacios)
+  phoneNumber = "5493815225159" // Número de WhatsApp (con código de país sin + ni espacios)
 }) => {
+  // Formatea en pantalla como: 3815 22-5159
+  const displayPhone = `${phoneNumber.slice(-10, -6)} ${phoneNumber.slice(-6, -4)}-${phoneNumber.slice(-4)}`;
   const [guestName, setGuestName] = useState('');
   const [attendance, setAttendance] = useState('yes');
   const [dietary, setDietary] = useState('');
@@ -14,13 +16,13 @@ export const RsvpSection = ({
 
     let message = '';
     if (attendance === 'yes') {
-      message = `¡Hola! 👋 Confirmo mi asistencia a los 60 Años de Héctor 🎉.\n\n👤 *Nombre:* ${guestName.trim()}`;
+      message = `¡Hola! 👋 Confirmo mi asistencia a los Falsos 60 Años de Héctor (La Leyenda) 🎉.\n\n👤 *Nombre:* ${guestName.trim()}`;
       if (dietary.trim()) {
         message += `\n🥗 *Preferencia/Restricción alimentaria:* ${dietary.trim()}`;
       }
       message += `\n\n¡Listo para la fiesta! 🕺💃`;
     } else {
-      message = `¡Hola! 👋 Soy ${guestName.trim()}. Lamentablemente no podré ir a los 60 Años de Héctor, pero le envío un abrazo enorme. 🎉`;
+      message = `¡Hola! 👋 Soy ${guestName.trim()}. Lamentablemente no podré ir a los Falsos 60 Años de Héctor (La Leyenda), pero le envío un abrazo enorme. 🎉`;
     }
 
     const encodedMessage = encodeURIComponent(message);
@@ -37,7 +39,8 @@ export const RsvpSection = ({
         <div className={styles.divider}></div>
 
         <p className={styles.description}>
-          Por favor, confirmá tu presencia para organizar mejor la comida y el espacio.
+          {`Confirmá si cuento con vos. Completá el formulario y tu confirmación se envía por WhatsApp, o escribime directamente al `}
+          <a className={styles.phoneLink} href={`tel:+${phoneNumber}`}>{displayPhone}</a>.
         </p>
 
         <form onSubmit={handleSendWhatsApp} className={styles.form}>

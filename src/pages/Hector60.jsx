@@ -14,17 +14,32 @@ function Hector60() {
       <div className={styles.overlay}></div>
 
       <div className={styles.contentDirect}>
-        <HeaderInvitation />
-        <Countdown targetDate="2026-11-14T13:00:00" />
-        <PhotoCarousel />
-        <EventDetails />
-        <GiftSection 
-          alias="HECTOR.60.SALSA" 
-          cbu="0000003100087654321098"
-          bankName="Banco Nación"
-          accountHolder="Héctor González"
+        <HeaderInvitation 
+          name="Héctor"
+          age={60}
+          eventTitle="Los Falsos 60 Años de La Leyenda"
+          message={`Solo trae muchas bebidas y ganas de divertirte! 🍻\n\nTe espero con la mejor música de DJ. Edu Santillan + Cachengue 🎶`}
         />
-        <RsvpSection phoneNumber="5493881234567" />
+        <Countdown targetDate="2026-09-26T15:00:00" />
+        <PhotoCarousel />
+        <EventDetails 
+          date="Sábado, 26 de Septiembre"
+          time="15 a 21 hs y lo que aguantes!"
+          locationName="Los Azares y Los Ceibos"
+          address="El Cadillal / Barrio Villa del Parque"
+          mapUrl="https://maps.google.com/?q=LA+LEYENDA,+El+Cadillal,+Tucuman"
+          dressCode="INFORMAL"
+          mapHint="Pista: buscá 'LA LEYENDA' en Google Maps y vas a encontrar la casa de Héctor 😉"
+        />
+        <GiftSection 
+          alias="NUCLEO.PUPILA.COREA" 
+          cbu="0110314230031416382483"
+          bankName="Banco Nación"
+          accountHolder="Héctor Eusebio Aguirre"
+          cuil="20137618010"
+          accountNumber="CA $ 21413141638248"
+        />
+        <RsvpSection phoneNumber="5493815225159" />
       </div>
 
       <MusicPlayer 

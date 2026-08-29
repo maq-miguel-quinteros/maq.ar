@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Countdown.module.css';
 
-export const Countdown = ({ targetDate = "2026-11-14T13:00:00" }) => {
+export const Countdown = ({ targetDate = "2026-09-26T15:00:00" }) => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,

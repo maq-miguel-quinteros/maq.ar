@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import styles from './GiftSection.module.css';
 
 export const GiftSection = ({
-  alias = "HECTOR.60.SALSA",
-  cbu = "0000003100087654321098",
+  alias = "NUCLEO.PUPILA.COREA",
+  cbu = "0110314230031416382483",
   bankName = "Banco Nación",
-  accountHolder = "Héctor González"
+  accountHolder = "Héctor Eusebio Aguirre",
+  cuil = "20137618010",
+  accountNumber = "CA $ 21413141638248"
 }) => {
   const [copied, setCopied] = useState(false);
 
@@ -36,6 +38,16 @@ export const GiftSection = ({
           <div className={styles.bankDetail}>
             <span className={styles.label}>Banco:</span>
             <span className={styles.value}>{bankName}</span>
+          </div>
+
+          <div className={styles.bankDetail}>
+            <span className={styles.label}>N.º de cuenta:</span>
+            <span className={styles.cbuValue}>{accountNumber}</span>
+          </div>
+
+          <div className={styles.bankDetail}>
+            <span className={styles.label}>CUIL:</span>
+            <span className={styles.value}>{cuil}</span>
           </div>
 
           <div className={styles.bankDetail}>

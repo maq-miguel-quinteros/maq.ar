@@ -20,7 +20,7 @@
 .badge {
   background: linear-gradient(135deg, #e0f2f1, #b2dfdb);
   color: #004d40;
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -34,16 +34,19 @@
 /* Contenedor de la foto de perfil */
 .imageContainer {
   position: relative;
-  width: 300px;
+  width: 100%;
+  max-width: 520px;
   height: 300px;
   margin-bottom: 0.8rem;
+  border-radius: 22px;
+  overflow: hidden;
 }
 
 .imageRing {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
-  padding: 4px;
+  border-radius: 22px;
+  padding: 5px;
   /* Gradiente entre verde esmeralda y azul oceánico */
   background: linear-gradient(135deg, #00897b, #0288d1);
   box-shadow: 0 8px 22px rgba(0, 77, 64, 0.25);
@@ -54,9 +57,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 18px;
   border: 3px solid #ffffff;
   box-sizing: border-box;
+  display: block;
 }
 
 /* Notas musicales flotantes */
@@ -72,17 +76,18 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 10px rgba(0, 77, 64, 0.15);
+  z-index: 2;
 }
 
 .musicNoteLeft {
-  top: 10px;
-  left: -8px;
+  top: 12px;
+  left: 12px;
   transform: rotate(-12deg);
 }
 
 .musicNoteRight {
-  bottom: 10px;
-  right: -8px;
+  bottom: 12px;
+  right: 12px;
   transform: rotate(12deg);
 }
 
@@ -125,6 +130,7 @@
   font-size: 0.95rem;
   color: #004d40;
   line-height: 1.55;
+  white-space: pre-line;
   font-weight: 500;
   margin: 0 0 1rem 0;
 }
@@ -142,8 +148,17 @@
 /* Adaptación para dispositivos móviles */
 @media (max-width: 480px) {
   .imageContainer {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 220px;
+    border-radius: 18px;
+  }
+
+  .imageRing {
+    border-radius: 18px;
+  }
+
+  .profileImage {
+    border-radius: 15px;
   }
 
   .title {

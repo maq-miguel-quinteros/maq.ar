@@ -141,6 +141,18 @@
   box-shadow: 0 8px 22px rgba(2, 136, 209, 0.45);
 }
 
+.phoneLink {
+  color: #00897b;
+  font-weight: 800;
+  text-decoration: none;
+  border-bottom: 2px solid #b2dfdb;
+}
+
+.phoneLink:hover {
+  color: #0288d1;
+  border-bottom-color: #0288d1;
+}
+
 @media (max-width: 480px) {
   .radioGroup {
     flex-direction: column;

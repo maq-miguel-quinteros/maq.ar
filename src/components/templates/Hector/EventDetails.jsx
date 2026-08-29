@@ -2,12 +2,13 @@ import React from 'react';
 import styles from './EventDetails.module.css';
 
 export const EventDetails = ({
-  date = "Sábado, 14 de Noviembre",
-  time = "13:00 hs (Almuerzo y Pileta)",
-  locationName = "Quinta Las Palmeras",
-  address = "Av. del Sol 1234, Zona de Quintas",
-  mapUrl = "https://maps.google.com/?q=Quinta+Las+Palmeras",
-  dressCode = "Veraniego / Traje de baño"
+  date = "Sábado, 26 de Septiembre",
+  time = "15 a 21 hs y lo que aguantes!",
+  locationName = "Los Azares y Los Ceibos",
+  address = "El Cadillal / Barrio Villa del Parque",
+  mapUrl = "https://maps.google.com/?q=LA+LEYENDA,+El+Cadillal,+Tucuman",
+  dressCode = "INFORMAL",
+  mapHint = "Pista: buscá 'LA LEYENDA' en Google Maps y vas a encontrar la casa de Héctor"
 }) => {
   return (
     <section className={styles.container}>
@@ -64,6 +65,10 @@ export const EventDetails = ({
             🗺️ Abrir ubicación en Google Maps
           </a>
         </div>
+
+        {mapHint && (
+          <p className={styles.mapHint}>{mapHint}</p>
+        )}
       </div>
     </section>
   );

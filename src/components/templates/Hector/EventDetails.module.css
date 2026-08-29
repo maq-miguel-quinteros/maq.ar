@@ -119,6 +119,19 @@
 }
 
 /* Adaptación responsive para celulares */
+.mapHint {
+  margin: 1rem auto 0 auto;
+  max-width: 420px;
+  font-size: 0.82rem;
+  color: #6d4c41;
+  background: #fff3e0;
+  border: 1px dashed #ffb74d;
+  border-radius: 10px;
+  padding: 0.55rem 0.8rem;
+  line-height: 1.45;
+}
+
+/* Pista sobre cómo encontrar la casa de Héctor */
 @media (max-width: 520px) {
   .grid {
     grid-template-columns: 1fr;
