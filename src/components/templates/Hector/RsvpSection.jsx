@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './RsvpSection.module.css';
 
 export const RsvpSection = ({ 
-  phoneNumber = "5493815225159" // Número de WhatsApp (con código de país sin + ni espacios)
+  phoneNumber = "5493816459634" // Número de WhatsApp (con código de país sin + ni espacios)
 }) => {
   // Formatea en pantalla como: 3815 22-5159
   const displayPhone = `${phoneNumber.slice(-10, -6)} ${phoneNumber.slice(-6, -4)}-${phoneNumber.slice(-4)}`;
@@ -46,7 +46,7 @@ export const RsvpSection = ({
         <form onSubmit={handleSendWhatsApp} className={styles.form}>
           <div className={styles.inputGroup}>
             <label htmlFor="guestName" className={styles.label}>
-              Nombre y Apellido del / de los asistentes:
+              Nombre y Apellido:
             </label>
             <input
               id="guestName"
@@ -86,7 +86,7 @@ export const RsvpSection = ({
             </div>
           </div>
 
-          {attendance === 'yes' && (
+          {/* {attendance === 'yes' && (
             <div className={styles.inputGroup}>
               <label htmlFor="dietary" className={styles.label}>
                 Restricción alimentaria / Menú especial (opcional):
@@ -100,7 +100,7 @@ export const RsvpSection = ({
                 className={styles.input}
               />
             </div>
-          )}
+          )} */}
 
           <button type="submit" className={styles.whatsappButton}>
             💬 Confirmar por WhatsApp

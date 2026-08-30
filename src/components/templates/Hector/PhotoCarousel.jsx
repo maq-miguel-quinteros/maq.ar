@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import styles from './PhotoCarousel.module.css';
 
-export const PhotoCarousel = ({ 
+// Imágenes importadas como módulos para que el bundler las procese correctamente
+import carousel01 from '../../../assets/hector/carousel01.jpg';
+import carousel02 from '../../../assets/hector/carousel02.jpeg';
+import carousel03 from '../../../assets/hector/carousel03.jpg';
+
+export const PhotoCarousel = ({
   images = [
-    { url: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80", caption: "¡Ritmo y Sabor!" },
-    { url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80", caption: "Clima veraniego" },
-    { url: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80", caption: "Tragos y buena compañía" }
+    { url: carousel01, caption: '¡Ritmo y Sabor!' },
+    { url: carousel02, caption: 'Momentos especiales' },
+    { url: carousel03, caption: 'Celebrando juntos' }
   ], 
   autoPlayInterval = 3500 
 }) => {

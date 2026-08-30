@@ -1,0 +1,94 @@
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 1.5rem auto;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-radius: 22px;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  border: 2px solid #ffe082;
+  border-top: 5px solid #d4a017;
+  text-align: center;
+}
+
+.iconHeader {
+  font-size: 2.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #3e2723;
+  margin: 0 0 0.4rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.divider {
+  width: 45px;
+  height: 3px;
+  background: linear-gradient(90deg, #d4a017, #f57f17);
+  margin: 0 auto 1.25rem auto;
+  border-radius: 2px;
+}
+
+.logoWrapper {
+  margin: 0 auto 1rem auto;
+  max-width: 320px;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.slogan {
+  font-size: 0.98rem;
+  color: #5d4037;
+  line-height: 1.5;
+  margin: 0 0 1.25rem 0;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.contactLink {
+  display: inline-block;
+  background: linear-gradient(135deg, #d4a017, #f57f17);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 50px;
+  box-shadow: 0 6px 18px rgba(212, 160, 23, 0.35);
+  transition: all 0.25s ease;
+}
+
+.contactLink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(212, 160, 23, 0.5);
+}
+
+/* Adaptación responsive */
+@media (max-width: 480px) {
+  .card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .logoWrapper {
+    max-width: 260px;
+  }
+
+  .contactLink {
+    font-size: 0.9rem;
+    padding: 0.75rem 1.25rem;
+  }
+}

@@ -5,6 +5,7 @@ import { PhotoCarousel } from '../components/templates/Hector/PhotoCarousel';
 import { EventDetails } from '../components/templates/Hector/EventDetails';
 import { GiftSection } from '../components/templates/Hector/GiftSection';
 import { RsvpSection } from '../components/templates/Hector/RsvpSection';
+import { OrganizerSection } from '../components/templates/Hector/OrganizerSection';
 import { MusicPlayer } from '../components/templates/Hector/MusicPlayer';
 import styles from './Hector60.module.css';
 
@@ -39,7 +40,8 @@ function Hector60() {
           cuil="20137618010"
           accountNumber="CA $ 21413141638248"
         />
-        <RsvpSection phoneNumber="5493815225159" />
+        <RsvpSection phoneNumber="5493816459634" />
+        <OrganizerSection />
       </div>
 
       <MusicPlayer 

@@ -3,7 +3,7 @@
   width: 100%;
   position: relative;
   /* Foto de agua cristalina y palmeras en tonos verdes/azules */
-  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
+  background: url(../assets/hector/background.jpg) center/cover no-repeat fixed;
   padding: 2rem 1rem 4rem 1rem;
   box-sizing: border-box;
   display: flex;

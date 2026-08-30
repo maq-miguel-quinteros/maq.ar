@@ -26,7 +26,7 @@ export const HeaderInvitation = ({
 
       {/* Nombre principal */}
       <h1 className={styles.title}>{name}</h1>
-      <p className={styles.slogan}>Salsa, Sol & Celebración</p>
+      <p className={styles.slogan}>Música, Sol & Celebración</p>
 
       {/* Tarjeta con contenido formal y claro */}
       <div className={styles.cardInfo}>
