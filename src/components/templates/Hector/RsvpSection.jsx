@@ -105,6 +105,9 @@ export const RsvpSection = ({
           <button type="submit" className={styles.whatsappButton}>
             💬 Confirmar por WhatsApp
           </button>
+          <p className={styles.description2}>
+            {`Evento solo para adultos`}
+        </p>
         </form>
       </div>
     </section>
