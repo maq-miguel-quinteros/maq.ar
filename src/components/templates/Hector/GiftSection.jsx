@@ -65,9 +65,9 @@ export const GiftSection = ({
           </button>
         </div>
 
-        <div className={styles.envelopeNote}>
+{/*         <div className={styles.envelopeNote}>
           ✉️ Habrá una urna para sobres en el salón.
-        </div>
+        </div> */}
       </div>
     </section>
   );
