@@ -5,7 +5,7 @@ import fanfanLogo from '../../../assets/hector/fanfan-eventos-logo.png';
 export const OrganizerSection = ({
   orgName = 'Fanfán Eventos',
   slogan = 'Celebraciones que dejan huella...',
-  phoneNumber = '5493816459634',
+  phoneNumber = '5493815225159',
   logo = fanfanLogo
 }) => {
   const displayPhone = `${phoneNumber.slice(-10, -6)} ${phoneNumber.slice(-6, -4)}-${phoneNumber.slice(-4)}`;
