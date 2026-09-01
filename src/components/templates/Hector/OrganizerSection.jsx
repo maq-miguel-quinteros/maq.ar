@@ -13,8 +13,8 @@ export const OrganizerSection = ({
   return (
     <section className={styles.container}>
       <div className={styles.card}>
-        <div className={styles.iconHeader}>🏷️</div>
-        <h2 className={styles.title}>Organizadora del Evento</h2>
+{/*         <div className={styles.iconHeader}>🏷️</div> */}
+        {/* <h2 className={styles.title}>Organizadora del Evento</h2> */}
         <div className={styles.divider}></div>
 
         <div className={styles.logoWrapper}>
@@ -29,7 +29,7 @@ export const OrganizerSection = ({
           target="_blank"
           rel="noopener noreferrer"
         >
-          📱 Reservá tu fecha → {displayPhone}
+          📱 {displayPhone}
         </a>
       </div>
     </section>

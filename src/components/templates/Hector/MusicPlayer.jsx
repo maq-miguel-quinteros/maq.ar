@@ -1,14 +1,26 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styles from './MusicPlayer.module.css';
+import jamaicaAudio from '../../../assets/hector/jamaica.mp3';
 
 export const MusicPlayer = ({
-  songTitle = "Salsa & Sabor",
-  artist = "Música de Fondo",
-  // Puedes reemplazar esta URL por cualquier archivo .mp3 directo de salsa
-  audioUrl = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+  songTitle = "Jamaican (Bam Bam)",
+  artist = "Hugel & SOLTO",
+  audioUrl = jamaicaAudio
 }) => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   const audioRef = useRef(null);
+
+  // Reproduce la música automáticamente al entrar a la tarjeta.
+  // Muchos navegadores bloquean el autoplay con sonido hasta que el usuario
+  // interactúa con la página; en ese caso queda pausado listo para tocar play.
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    audio.play()
+      .then(() => setIsPlaying(true))
+      .catch(() => setIsPlaying(false));
+  }, []);
 
   const togglePlay = () => {
     if (!audioRef.current) return;
@@ -35,7 +47,7 @@ export const MusicPlayer = ({
         <span className={styles.icon}>{isPlaying ? '⏸️' : '🎺'}</span>
         
         <div className={styles.infoWrapper}>
-          <span className={styles.label}>{isPlaying ? 'Sonando salsa...' : 'Música de fondo'}</span>
+          <span className={styles.label}>{isPlaying ? 'Sonando...' : 'Música de fondo'}</span>
           <span className={styles.title}>{songTitle}</span>
         </div>
 

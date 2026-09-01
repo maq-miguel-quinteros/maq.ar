@@ -25,7 +25,7 @@ export const GiftSection = ({
         <div className={styles.divider}></div>
         
         <p className={styles.description}>
-          El mejor regalo es tu presencia y tus ganas de bailar. Si querés realizar un obsequio, podés colaborar con mi viaje o dejar tu sobre el día del evento.
+          El mejor regalo es tu presencia y tus ganas de bailar. Si querés realizar un obsequio:
         </p>
 
         {/* Bloque con los datos bancarios */}

@@ -23,7 +23,7 @@
 }
 
 .title {
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: 800;
   color: #bf360c;
   margin: 0 0 0.4rem 0;
@@ -40,7 +40,7 @@
 }
 
 .description {
-  font-size: 0.98rem;
+  font-size: 0.9rem;
   color: #37474f;
   line-height: 1.5;
   margin: 0 0 1.5rem 0;

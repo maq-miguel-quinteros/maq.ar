@@ -44,9 +44,9 @@ function Hector60() {
         <OrganizerSection />
       </div>
 
-      <MusicPlayer 
-        songTitle="Salsa para Héctor" 
-        audioUrl="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" 
+      <MusicPlayer
+        songTitle="Jamaican (Bam Bam)"
+        artist="Hugel & SOLTO"
       />
     </div>
   );
