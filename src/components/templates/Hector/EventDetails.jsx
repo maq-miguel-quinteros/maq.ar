@@ -4,7 +4,7 @@ import styles from './EventDetails.module.css';
 export const EventDetails = ({
   date = "Sábado, 26 de Septiembre",
   time = "15 a 21 hs y lo que aguantes!",
-  locationName = "Los Azares y Los Ceibos",
+  locationName = "Los Azhares y Los Ceibos",
   address = "El Cadillal / Barrio Villa del Parque",
   mapUrl = "https://maps.google.com/?q=LA+LEYENDA,+El+Cadillal,+Tucuman",
   dressCode = "INFORMAL",
